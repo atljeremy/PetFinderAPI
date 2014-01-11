@@ -56,7 +56,7 @@ PFPetGetRequest* request = [PFPetGetRequest petGetRequestWithPetID:@27864848];
  * Request a random pet
  */
 PFPetGetRandomRequest* request = [PFPetGetRandomRequest new];
-request.animal = @"dog"  ;// type of animal (barnyard, bird, cat, dog, horse, pig, reptile, smallfurry)
+request.animal = @"dog";  // type of animal (barnyard, bird, cat, dog, horse, pig, reptile, smallfurry)
 //request.breed = @"";    // breed of animal (use PFBreedListRequest for a list of valid breeds)
 //request.size = @"";     // size of animal (S=small, M=medium, L=large, XL=extra-large)
 //request.sex = @"";      // M=male, F=female
