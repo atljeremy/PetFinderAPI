@@ -19,7 +19,7 @@ How to Use This Framework:
 ```objective-c
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [PFClient initializeWithAPIKey:@“YourAPIKeyHere];
+    [PFClient initializeWithAPIKey:@“YourAPIKeyHere"];
     return YES;
 }
 ```
