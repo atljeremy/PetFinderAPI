@@ -78,7 +78,7 @@ request.animal = @"dog";     // type of animal (barnyard, bird, cat, dog, horse,
 //request.breed = @"";       // breed of animal (use PFBreedListRequest for a list of valid breeds)
 request.size = @"L";         // size of animal (S=small, M=medium, L=large, XL=extra-large)
 request.sex = @"M";          // M=male, F=female
-request.location = @"30666"; // the ZIP/postal code or city and state where the search should begin
+request.location = @"30301"; // the ZIP/postal code or city and state where the search should begin
 request.age = @"Young";      // age of the animal (Baby, Young, Adult, Senior)
 //request.offset = @"";      // set this to the value of lastOffset returned by a previous PFPetFindRequest
 request.count = @25;         // how many records to return for this particular API call (default is 25)
@@ -94,7 +94,7 @@ request.count = @25;         // how many records to return for this particular A
  * Find shelters that match specify request criteria
  */
 PFShelterFindRequest* request = [PFShelterFindRequest new];
-request.location = @"30666"; // the ZIP/postal code or city and state where the search should begin
+request.location = @"30301"; // the ZIP/postal code or city and state where the search should begin
 //request.name = @"";        // full or partial shelter name
 //request.offset = @"";      // set this to the value of lastOffset returned by a previous PFPetFindRequest
 request.count = @25;         // how many records to return for this particular API call (default is 25)
