@@ -8,7 +8,7 @@ Online Documentation is available [here](http://atljeremy.github.io/PetFinderAPI
 How to Install this Framework:
 ----------------------------
 
-- Download the pre-compiled framework here: TBD
+- Download the pre-compiled framework here: [here](http://atljeremy.github.io/PetFinderAPI/PetFinderAPI.framework)
 - Drag it into your Xcode project
 
 How to Use This Framework:
