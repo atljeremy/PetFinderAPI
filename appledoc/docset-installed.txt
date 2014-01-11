@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/jfox/Library/Developer/Shared/Documentation/DocSets/com.jeremyfox.PetFinderAPI.docset
+Time: 2014-01-11 00:57:11 +0000

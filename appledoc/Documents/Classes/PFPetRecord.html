@@ -1,0 +1,675 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>PFPetRecord Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">PetFinderAPI </a></h1>
+				<a id="developerHome" href="../index.html">Jeremy Fox</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">PFPetRecord Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/ageType">&nbsp;&nbsp;&nbsp;&nbsp;ageType</option>
+	
+	<option value="//api/name/animalType">&nbsp;&nbsp;&nbsp;&nbsp;animalType</option>
+	
+	<option value="//api/name/breedsList">&nbsp;&nbsp;&nbsp;&nbsp;breedsList</option>
+	
+	<option value="//api/name/contactType">&nbsp;&nbsp;&nbsp;&nbsp;contactType</option>
+	
+	<option value="//api/name/description">&nbsp;&nbsp;&nbsp;&nbsp;description</option>
+	
+	<option value="//api/name/genderType">&nbsp;&nbsp;&nbsp;&nbsp;genderType</option>
+	
+	<option value="//api/name/lastUpdate">&nbsp;&nbsp;&nbsp;&nbsp;lastUpdate</option>
+	
+	<option value="//api/name/mediaType">&nbsp;&nbsp;&nbsp;&nbsp;mediaType</option>
+	
+	<option value="//api/name/mix">&nbsp;&nbsp;&nbsp;&nbsp;mix</option>
+	
+	<option value="//api/name/name">&nbsp;&nbsp;&nbsp;&nbsp;name</option>
+	
+	<option value="//api/name/optionsList">&nbsp;&nbsp;&nbsp;&nbsp;optionsList</option>
+	
+	<option value="//api/name/petID">&nbsp;&nbsp;&nbsp;&nbsp;petID</option>
+	
+	<option value="//api/name/shelterID">&nbsp;&nbsp;&nbsp;&nbsp;shelterID</option>
+	
+	<option value="//api/name/shelterPetID">&nbsp;&nbsp;&nbsp;&nbsp;shelterPetID</option>
+	
+	<option value="//api/name/sizeType">&nbsp;&nbsp;&nbsp;&nbsp;sizeType</option>
+	
+	<option value="//api/name/statusType">&nbsp;&nbsp;&nbsp;&nbsp;statusType</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/petRecordFromDictionary:">&nbsp;&nbsp;&nbsp;&nbsp;+ petRecordFromDictionary:</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/initWithPetRecordDictionary:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithPetRecordDictionary:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/ageType">ageType</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/animalType">animalType</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/breedsList">breedsList</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/contactType">contactType</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/description">description</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/genderType">genderType</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lastUpdate">lastUpdate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mediaType">mediaType</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mix">mix</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/name">name</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/optionsList">optionsList</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/petID">petID</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shelterID">shelterID</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shelterPetID">shelterPetID</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sizeType">sizeType</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/statusType">statusType</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/petRecordFromDictionary:">petRecordFromDictionary:</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithPetRecordDictionary:">initWithPetRecordDictionary:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="PFPetRecord Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">PFPetRecord Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">PFPetRecord.h<br />PFPetRecord.m</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/petID">&nbsp;&nbsp;petID</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shelterID">&nbsp;&nbsp;shelterID</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shelterPetID">&nbsp;&nbsp;shelterPetID</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/name">&nbsp;&nbsp;name</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/animalType">&nbsp;&nbsp;animalType</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/breedsList">&nbsp;&nbsp;breedsList</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mix">&nbsp;&nbsp;mix</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/ageType">&nbsp;&nbsp;ageType</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/genderType">&nbsp;&nbsp;genderType</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sizeType">&nbsp;&nbsp;sizeType</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/optionsList">&nbsp;&nbsp;optionsList</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/description">&nbsp;&nbsp;description</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/lastUpdate">&nbsp;&nbsp;lastUpdate</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/statusType">&nbsp;&nbsp;statusType</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mediaType">&nbsp;&nbsp;mediaType</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/contactType">&nbsp;&nbsp;contactType</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/petRecordFromDictionary:">+&nbsp;petRecordFromDictionary:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithPetRecordDictionary:">&ndash;&nbsp;initWithPetRecordDictionary:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/ageType" title="ageType"></a>
+	<h3 class="subsubtitle method-title">ageType</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) PFPetAgeType *ageType</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/animalType" title="animalType"></a>
+	<h3 class="subsubtitle method-title">animalType</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) PFAnimalType *animalType</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/breedsList" title="breedsList"></a>
+	<h3 class="subsubtitle method-title">breedsList</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) PFBreedList *breedsList</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/contactType" title="contactType"></a>
+	<h3 class="subsubtitle method-title">contactType</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) PFPetContactType *contactType</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/description" title="description"></a>
+	<h3 class="subsubtitle method-title">description</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *description</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/genderType" title="genderType"></a>
+	<h3 class="subsubtitle method-title">genderType</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) PFPetGenderType *genderType</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/lastUpdate" title="lastUpdate"></a>
+	<h3 class="subsubtitle method-title">lastUpdate</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSDate *lastUpdate</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mediaType" title="mediaType"></a>
+	<h3 class="subsubtitle method-title">mediaType</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) PFPetMediaType *mediaType</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mix" title="mix"></a>
+	<h3 class="subsubtitle method-title">mix</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSString *mix</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/name" title="name"></a>
+	<h3 class="subsubtitle method-title">name</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *name</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/optionsList" title="optionsList"></a>
+	<h3 class="subsubtitle method-title">optionsList</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) PFPetOptionList *optionsList</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/petID" title="petID"></a>
+	<h3 class="subsubtitle method-title">petID</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) PFPetIDType *petID</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shelterID" title="shelterID"></a>
+	<h3 class="subsubtitle method-title">shelterID</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) PFShelterIDType *shelterID</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shelterPetID" title="shelterPetID"></a>
+	<h3 class="subsubtitle method-title">shelterPetID</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *shelterPetID</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sizeType" title="sizeType"></a>
+	<h3 class="subsubtitle method-title">sizeType</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) PFPetSizeType *sizeType</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/statusType" title="statusType"></a>
+	<h3 class="subsubtitle method-title">statusType</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) PFPetStatusType *statusType</code></div>
+
+    
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/petRecordFromDictionary:" title="petRecordFromDictionary:"></a>
+	<h3 class="subsubtitle method-title">petRecordFromDictionary:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>+ (instancetype)petRecordFromDictionary:(NSDictionary *)<em>dict</em></code></div>
+
+    
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithPetRecordDictionary:" title="initWithPetRecordDictionary:"></a>
+	<h3 class="subsubtitle method-title">initWithPetRecordDictionary:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithPetRecordDictionary:(NSDictionary *)<em>dict</em></code></div>
+
+    
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2014 Jeremy Fox. All rights reserved. (Last updated: 2014-01-10)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>
