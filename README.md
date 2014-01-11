@@ -56,12 +56,12 @@ PFPetGetRequest* request = [PFPetGetRequest petGetRequestWithPetID:@27864848];
  * Request a random pet
  */
 PFPetGetRandomRequest* request = [PFPetGetRandomRequest new];
-request.animal = @"dog";// type of animal (barnyard, bird, cat, dog, horse, pig, reptile, smallfurry)
-request.breed = @"";    // breed of animal (use PFBreedListRequest for a list of valid breeds)
-request.size = @"";     // size of animal (S=small, M=medium, L=large, XL=extra-large)
-request.size = @"";     // M=male, F=female
-request.location = @""; // the ZIP/postal code or city and state where the search should begin
-request.shelterid = @"";// ID of the shelter that posted the pet
+request.animal = @"dog"  ;// type of animal (barnyard, bird, cat, dog, horse, pig, reptile, smallfurry)
+//request.breed = @"";    // breed of animal (use PFBreedListRequest for a list of valid breeds)
+//request.size = @"";     // size of animal (S=small, M=medium, L=large, XL=extra-large)
+//request.sex = @"";      // M=male, F=female
+//request.location = @""; // the ZIP/postal code or city and state where the search should begin
+//request.shelterid = @"";// ID of the shelter that posted the pet
 [PFClient executePFPetGetRandomRequest:request success:^(PFPetRecord *petRecord, PFPetGetRandomRequest *request) {
     NSLog(@"Pet Record: %@", petRecord);
 } failure:^(PFPetGetRandomRequest *request, NSError *error) {
