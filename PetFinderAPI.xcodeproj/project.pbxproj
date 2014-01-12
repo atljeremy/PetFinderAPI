@@ -127,6 +127,7 @@
 		1A75E587187C8C7800961844 /* PFPetIDList.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A75E585187C8C7800961844 /* PFPetIDList.m */; };
 		1A75E58D187C93B600961844 /* PFPetMediaType.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A75E58B187C93B600961844 /* PFPetMediaType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A75E58E187C93B600961844 /* PFPetMediaType.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A75E58C187C93B600961844 /* PFPetMediaType.m */; };
+		1AC092211881B63700DDD8DB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC092201881B63700DDD8DB /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -266,6 +267,7 @@
 		1A75E585187C8C7800961844 /* PFPetIDList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFPetIDList.m; sourceTree = "<group>"; };
 		1A75E58B187C93B600961844 /* PFPetMediaType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFPetMediaType.h; sourceTree = "<group>"; };
 		1A75E58C187C93B600961844 /* PFPetMediaType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFPetMediaType.m; sourceTree = "<group>"; };
+		1AC092201881B63700DDD8DB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +275,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AC092211881B63700DDD8DB /* MapKit.framework in Frameworks */,
 				1A75E4D3187C79C200961844 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,6 +375,7 @@
 		1A75E4D1187C79C200961844 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1AC092201881B63700DDD8DB /* MapKit.framework */,
 				1A75E4D2187C79C200961844 /* Foundation.framework */,
 				1A75E4E0187C79C200961844 /* XCTest.framework */,
 				1A75E4E3187C79C200961844 /* UIKit.framework */,

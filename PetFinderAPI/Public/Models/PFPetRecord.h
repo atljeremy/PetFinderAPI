@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
 
 //<xs:complexType name="petfinderPetRecord">
 //<xs:sequence>
@@ -54,7 +55,7 @@
 //</xs:sequence>
 //</xs:complexType>
 
-@interface PFPetRecord : NSObject
+@interface PFPetRecord : NSObject <MKAnnotation>
 
 @property (nonatomic, strong) PFPetIDType* petID;
 @property (nonatomic, strong) PFShelterIDType* shelterID;
