@@ -19,5 +19,7 @@ NSString* const kPetMediaVideoIDKey;
 @property (nonatomic, strong, readonly) NSArray* videos;
 
 + (instancetype)mediaTypeWithMediaDictionary:(NSDictionary*)mediaDict;
++ (instancetype)mediaTypeWithPhotos:(NSArray*)photos;
++ (instancetype)mediaTypeWithVideos:(NSArray*)videos;
 
 @end

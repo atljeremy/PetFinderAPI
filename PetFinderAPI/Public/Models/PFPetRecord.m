@@ -55,4 +55,29 @@
     return [[self alloc] initWithPetRecordDictionary:dict];
 }
 
+- (NSString*)cityState
+{
+    NSString* cityState = @"";
+    if (self.contactType.city && self.contactType.state) {
+        cityState = [self.contactType.city stringByAppendingFormat:@", %@", self.contactType.state];
+    }
+    return cityState;
+}
+
+- (NSString*)cityStateZip
+{
+    NSString* cityStateZip = @"";
+    if (self.contactType.zip) {
+        cityStateZip = [self.cityState stringByAppendingFormat:@" %@", self.contactType.zip];
+    }
+    return cityStateZip;
+}
+
+- (void)setCoordinate:(CLLocationCoordinate2D)coordinate
+{
+    [self willChangeValueForKey:@"coordinate"];
+    _coordinate = coordinate;
+    [self didChangeValueForKey:@"coordinate"];
+}
+
 @end

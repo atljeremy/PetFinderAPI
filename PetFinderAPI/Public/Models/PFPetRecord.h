@@ -63,7 +63,7 @@
 @property (nonatomic, strong) NSString* name;
 @property (nonatomic, strong) PFAnimalType* animalType;
 @property (nonatomic, strong) PFBreedList* breedsList;
-@property (nonatomic, assign) NSString* mix;
+@property (nonatomic, strong) NSString* mix;
 @property (nonatomic, strong) PFPetAgeType* ageType;
 @property (nonatomic, strong) PFPetGenderType* genderType;
 @property (nonatomic, strong) PFPetSizeType* sizeType;
@@ -73,7 +73,12 @@
 @property (nonatomic, strong) PFPetStatusType* statusType;
 @property (nonatomic, strong) PFPetMediaType* mediaType;
 @property (nonatomic, strong) PFPetContactType* contactType;
+@property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 
 + (instancetype)petRecordFromDictionary:(NSDictionary*)dict;
+
+- (NSString*)cityState;
+- (NSString*)cityStateZip;
+- (void)setCoordinate:(CLLocationCoordinate2D)coordinate;
 
 @end

@@ -34,12 +34,17 @@
 
 NSString* const kPetPhotoIDKey;
 NSString* const kPetPhotoSizeKey;
+NSString* const kPetPhotoXKey;
+NSString* const kPetPhotoTKey;
+NSString* const kPetPhotoPNKey;
+NSString* const kPetPhotoPNTKey;
+NSString* const kPetPhotoFPMKey;
 
 @interface PFPetPhotoType : NSObject
 
-@property (nonatomic, strong, readonly) NSString* imageURL;
-@property (nonatomic, strong, readonly) NSNumber* identifier;
-@property (nonatomic, strong, readonly) NSString* size;
+@property (nonatomic, strong) NSString* imageURL;
+@property (nonatomic, strong) NSString* identifier;
+@property (nonatomic, strong) NSString* size;
 
 + (instancetype)fromDictionary:(NSDictionary*)dict;
 

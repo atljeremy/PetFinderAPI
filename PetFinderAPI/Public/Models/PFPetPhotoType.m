@@ -10,13 +10,18 @@
 
 NSString* const kPetPhotoIDKey = @"@id";
 NSString* const kPetPhotoSizeKey = @"@size";
+NSString* const kPetPhotoXKey = @"x";
+NSString* const kPetPhotoTKey = @"t";
+NSString* const kPetPhotoPNKey = @"pn";
+NSString* const kPetPhotoPNTKey = @"pnt";
+NSString* const kPetPhotoFPMKey = @"fpm";
 
 NSString* iURL(NSDictionary* dict)
 {
     return [dict objectForKey:kPFAPIContentKey];
 }
 
-NSNumber* iID(NSDictionary* dict)
+NSString* iID(NSDictionary* dict)
 {
     return [dict objectForKey:kPetPhotoIDKey];
 }
@@ -26,15 +31,9 @@ NSString* iSize(NSDictionary* dict)
     return [dict objectForKey:kPetPhotoSizeKey];
 }
 
-@interface PFPetPhotoType()
-@property (nonatomic, strong, readwrite) NSString* imageURL;
-@property (nonatomic, strong, readwrite) NSNumber* identifier;
-@property (nonatomic, strong, readwrite) NSString* size;
-@end
-
 @implementation PFPetPhotoType
 
-- (id)initWithImageURL:(NSString*)imageURL imageID:(NSNumber*)imageID andSize:(NSString*)size {
+- (id)initWithImageURL:(NSString*)imageURL imageID:(NSString*)imageID andSize:(NSString*)size {
     if (self = [super init]) {
         _imageURL = imageURL;
         _identifier = imageID;

@@ -43,6 +43,24 @@ NSString* const kPetMediaVideoIDKey = @"video";
     return [[self alloc] initWithPhotos:photos andVideos:videos];
 }
 
++ (instancetype)mediaTypeWithPhotos:(NSArray *)photos
+{
+    if (!photos) {
+        return nil;
+    }
+    
+    return [[self alloc] initWithPhotos:photos andVideos:nil];
+}
+
++ (instancetype)mediaTypeWithVideos:(NSArray *)videos
+{
+    if (!videos) {
+        return nil;
+    }
+    
+    return [[self alloc] initWithPhotos:nil andVideos:videos];
+}
+
 + (NSArray*)parseMediaFor:(PFMediaType)type fromDictionary:(NSDictionary*)media
 {
     NSString* typesKey;
