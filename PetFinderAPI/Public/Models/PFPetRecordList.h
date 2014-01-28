@@ -20,5 +20,6 @@
 @property (nonatomic, strong, readonly) NSNumber* lastOffset;
 
 + (instancetype)petRecordListFromDictionary:(NSDictionary*)petDict;
++ (instancetype)petRecordListWithPets:(NSArray*)pets andLastOffset:(NSNumber*)lastOffset;
 
 @end

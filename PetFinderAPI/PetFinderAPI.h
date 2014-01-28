@@ -25,7 +25,6 @@
 #import <PetFinderAPI/PFPetIDList.h>
 #import <PetFinderAPI/PFBreedType.h>
 #import <PetFinderAPI/PFBreedList.h>
-#import <PetFinderAPI/PFPetContactType.h>
 #import <PetFinderAPI/PFPetStatusType.h>
 #import <PetFinderAPI/PFPetGenderType.h>
 #import <PetFinderAPI/PFPetAgeType.h>
@@ -39,8 +38,9 @@
 #import <PetFinderAPI/PFPetRecordList.h>
 #import <PetFinderAPI/PFShelterIDType.h>
 #import <PetFinderAPI/PFShelterRecordList.h>
-#import <PetFinderAPI/PFPetRecord.h>
 #import <PetFinderAPI/PFShelterRecord.h>
+#import <PetFinderAPI/PFPetContactType.h>
+#import <PetFinderAPI/PFPetRecord.h>
 
 // Service
 #import <PetFinderAPI/PFBaseRequest.h>

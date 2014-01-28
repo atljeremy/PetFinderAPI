@@ -72,13 +72,15 @@
 @property (nonatomic, strong) NSDate* lastUpdate;
 @property (nonatomic, strong) PFPetStatusType* statusType;
 @property (nonatomic, strong) PFPetMediaType* mediaType;
-@property (nonatomic, strong) PFPetContactType* contactType;
+@property (nonatomic, strong) PFShelterRecord* shelter;
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 
 + (instancetype)petRecordFromDictionary:(NSDictionary*)dict;
 
+- (NSString*)fullAddress;
 - (NSString*)cityState;
 - (NSString*)cityStateZip;
 - (void)setCoordinate:(CLLocationCoordinate2D)coordinate;
+- (PFPetPhotoType*)defaultThumbnail;
 
 @end

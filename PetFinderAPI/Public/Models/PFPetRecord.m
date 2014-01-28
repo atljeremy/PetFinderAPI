@@ -45,7 +45,7 @@
         _lastUpdate = lastUpdate; // Can be nil
         _statusType = VALUE_OR_DEFAULT([PFPetStatusType statusTypeWithStatus:status], [PFPetStatusType new]);
         _mediaType = VALUE_OR_DEFAULT([PFPetMediaType mediaTypeWithMediaDictionary:media], [PFPetMediaType new]);
-        _contactType = VALUE_OR_DEFAULT([PFPetContactType contactTypeFromContactDictionary:contact], [PFPetContactType new]);
+        _shelter = VALUE_OR_DEFAULT([PFShelterRecord shelterRecordFromDictionary:contact], [PFShelterRecord new]);
     }
     return self;
 }
@@ -55,11 +55,20 @@
     return [[self alloc] initWithPetRecordDictionary:dict];
 }
 
+- (NSString*)fullAddress
+{
+    NSString* address = self.cityStateZip;
+    if (self.shelter.address1.length > 0) {
+        address = [self.shelter.address1 stringByAppendingFormat:@", %@", address];
+    }
+    return address;
+}
+
 - (NSString*)cityState
 {
     NSString* cityState = @"";
-    if (self.contactType.city && self.contactType.state) {
-        cityState = [self.contactType.city stringByAppendingFormat:@", %@", self.contactType.state];
+    if (self.shelter.city.length > 0 && self.shelter.state.length > 0) {
+        cityState = [self.shelter.city stringByAppendingFormat:@", %@", self.shelter.state];
     }
     return cityState;
 }
@@ -67,8 +76,8 @@
 - (NSString*)cityStateZip
 {
     NSString* cityStateZip = @"";
-    if (self.contactType.zip) {
-        cityStateZip = [self.cityState stringByAppendingFormat:@" %@", self.contactType.zip];
+    if (self.shelter.zip.length > 0) {
+        cityStateZip = [self.cityState stringByAppendingFormat:@" %@", self.shelter.zip];
     }
     return cityStateZip;
 }
@@ -78,6 +87,16 @@
     [self willChangeValueForKey:@"coordinate"];
     _coordinate = coordinate;
     [self didChangeValueForKey:@"coordinate"];
+}
+
+- (PFPetPhotoType*)defaultThumbnail
+{
+    for (PFPetPhotoType* photoType in self.mediaType.photos) {
+        if ([photoType.size isEqualToString:kPetPhotoTKey]) {
+            return photoType;
+        }
+    }
+    return nil;
 }
 
 @end

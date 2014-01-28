@@ -45,7 +45,8 @@ static NSString* const kPFAPIOutputDefaultValue = @"full";
 {
     if (!self.baseURL) return nil;
     if (self.params) {
-        return [[self.baseURL stringByAppendingString:self.path] stringByAppendingQueryParameters:self.params];
+        NSString* params = [self.params stringFromURLEncodedQueryParams];
+        return [self.baseURL stringByAppendingFormat:@"%@?%@", self.path, params];
     } else {
         return self.baseURL;
     }

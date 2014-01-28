@@ -11,55 +11,89 @@
 @implementation PFPetFindRequest
 
 - (id)init {
-    return [super initWithPath:@"pet.find"];
+    if (self = [super initWithPath:@"pet.find"]) {
+    }
+    return self;
 }
 
 - (void)setAnimal:(NSString *)animal
 {
     _animal = animal;
-    [self.params setObject:_animal forKey:kPetRecordAnimalKey];
+    if (_animal && _animal.length > 0) {
+        [self.params setObject:_animal forKey:kPetRecordAnimalKey];
+    } else {
+        [self.params removeObjectForKey:kPetRecordAnimalKey];
+    }
 }
 
 - (void)setBreed:(NSString *)breed
 {
     _breed = breed;
-    [self.params setObject:_breed forKey:kPetRecordBreedKey];
+    if (_breed && _breed.length > 0) {
+        [self.params setObject:_breed forKey:kPetRecordBreedKey];
+    } else {
+        [self.params removeObjectForKey:kPetRecordBreedKey];
+    }
 }
 
 - (void)setSize:(NSString *)size
 {
     _size = size;
-    [self.params setObject:_size forKey:kPetRecordSizeKey];
+    if (_size && _size.length > 0) {
+        [self.params setObject:_size forKey:kPetRecordSizeKey];
+    } else {
+        [self.params removeObjectForKey:kPetRecordSizeKey];
+    }
 }
 
 - (void)setSex:(NSString *)sex
 {
     _sex = sex;
-    [self.params setObject:_sex forKey:kPetRecordSexKey];
+    if (_sex && _sex.length > 0) {
+        [self.params setObject:_sex forKey:kPetRecordSexKey];
+    } else {
+        [self.params removeObjectForKey:kPetRecordSexKey];
+    }
 }
 
 - (void)setLocation:(NSString *)location
 {
     _location = location;
-    [self.params setObject:_location forKey:kPetRecordLocationKey];
+    if (_location && _location.length > 0) {
+        [self.params setObject:_location forKey:kPetRecordLocationKey];
+    } else {
+        [self.params removeObjectForKey:kPetRecordLocationKey];
+    }
 }
 
 - (void)setAge:(NSString *)age
 {
     _age = age;
-    [self.params setObject:_age forKey:kPetRecordAgeKey];
+    if (_age && _age.length > 0) {
+        [self.params setObject:_age forKey:kPetRecordAgeKey];
+    } else {
+        [self.params removeObjectForKey:kPetRecordAgeKey];
+    }
 }
 
 - (void)setOffset:(NSString *)offset
 {
     _offset = offset;
-    [self.params setObject:_offset forKey:kPetRecordOffsetKey];
+    if (_offset && _offset.length > 0) {
+        [self.params setObject:_offset forKey:kPetRecordOffsetKey];
+    } else {
+        [self.params removeObjectForKey:kPetRecordOffsetKey];
+    }
 }
 
 - (void)setCount:(NSNumber *)count
 {
     _count = count;
-    [self.params setObject:_count forKey:kPetRecordCountKey];
+    if (_count && _count.intValue > 0) {
+        [self.params setObject:_count forKey:kPetRecordCountKey];
+    } else {
+        [self.params removeObjectForKey:kPetRecordCountKey];
+    }
 }
 
 @end

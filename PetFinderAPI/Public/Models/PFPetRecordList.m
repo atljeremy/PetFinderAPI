@@ -29,6 +29,15 @@ static NSString* const kPetRecordListLastOffsetKey = @"lastOffset";
     return [[self alloc] initWithPets:[self parsePets:petDict] forLastOffset:[self parseLastOffset:petDict]];
 }
 
++ (instancetype)petRecordListWithPets:(NSArray*)pets andLastOffset:(NSNumber*)lastOffset
+{
+    if (!pets || pets.count == 0 || !lastOffset) {
+        return nil;
+    }
+    
+    return [[self alloc] initWithPets:pets forLastOffset:lastOffset];
+}
+
 + (NSNumber*)parseLastOffset:(NSDictionary*)petDict
 {
     return [[petDict objectForKey:kPetRecordListLastOffsetKey] objectForKey:kPFAPIContentKey];
@@ -51,7 +60,7 @@ static NSString* const kPetRecordListLastOffsetKey = @"lastOffset";
         [petsArray addObject:[PFPetRecord petRecordFromDictionary:pets]];
         
     }
-    return [petsArray copy];
+    return petsArray;
 }
 
 

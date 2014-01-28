@@ -21,17 +21,7 @@
     //</xs:sequence>
 //</xs:complexType>
 
-@interface PFPetContactType : NSObject
-
-@property (nonatomic, strong, readonly) NSString* name;
-@property (nonatomic, strong, readonly) NSString* address1;
-@property (nonatomic, strong, readonly) NSString* address2;
-@property (nonatomic, strong, readonly) NSString* city;
-@property (nonatomic, strong, readonly) NSString* state;
-@property (nonatomic, strong, readonly) NSString* zip;
-@property (nonatomic, strong, readonly) NSString* phone;
-@property (nonatomic, strong, readonly) NSString* fax;
-@property (nonatomic, strong, readonly) NSString* email;
+@interface PFPetContactType : PFShelterRecord
 
 + (instancetype)contactTypeFromContactDictionary:(NSDictionary*)dict;
 

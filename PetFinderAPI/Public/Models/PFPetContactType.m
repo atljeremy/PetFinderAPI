@@ -8,18 +8,6 @@
 
 #import "PFPetContactType.h"
 
-@interface PFPetContactType()
-@property (nonatomic, strong, readwrite) NSString* name;
-@property (nonatomic, strong, readwrite) NSString* address1;
-@property (nonatomic, strong, readwrite) NSString* address2;
-@property (nonatomic, strong, readwrite) NSString* city;
-@property (nonatomic, strong, readwrite) NSString* state;
-@property (nonatomic, strong, readwrite) NSString* zip;
-@property (nonatomic, strong, readwrite) NSString* phone;
-@property (nonatomic, strong, readwrite) NSString* fax;
-@property (nonatomic, strong, readwrite) NSString* email;
-@end
-
 @implementation PFPetContactType
 
 + (instancetype)contactTypeFromContactDictionary:(NSDictionary*)dict
