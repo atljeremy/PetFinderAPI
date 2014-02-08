@@ -90,12 +90,21 @@ static PFClient* _sharedInstance = nil;
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:request.urlWithParams parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary* petFinderDict = [responseObject objectForKey:kPFAPIPetFinderKey];
-        NSArray* petRecords = [petFinderDict objectForKey:kPetRecordPetKey];
-        PFPetRecord* petRecord = [PFPetRecord petRecordFromDictionary:[petRecords randomObject]];
-        if (petRecord.petID.identifier && petRecord.petID.identifier.length > 0) {
-            if (success) success(petRecord, request);
+        id petRecords = [petFinderDict objectForKey:kPetRecordPetKey];
+        if ([petRecords isKindOfClass:[NSDictionary class]]) {
+            PFPetRecord* petRecord = [PFPetRecord petRecordFromDictionary:petRecords];
+            if (petRecord.petID.identifier && petRecord.petID.identifier.length > 0) {
+                if (success) success(petRecord, request);
+            } else {
+                if (failure) failure(request, [PFErrors errorForNoPetRecordAvailable]);
+            }
         } else {
-            if (failure) failure(request, [PFErrors errorForNoPetRecordAvailable]);
+            PFPetRecord* petRecord = [PFPetRecord petRecordFromDictionary:[petRecords randomObject]];
+            if (petRecord.petID.identifier && petRecord.petID.identifier.length > 0) {
+                if (success) success(petRecord, request);
+            } else {
+                if (failure) failure(request, [PFErrors errorForNoPetRecordAvailable]);
+            }
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (failure) failure(request, error);

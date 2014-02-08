@@ -25,7 +25,14 @@
         NSString* size = [[dict objectForKey:kPetRecordSizeKey] objectForKey:kPFAPIContentKey];
         id options = [[dict objectForKey:kPetRecordOptionsKey] objectForKey:kPetRecordOptionKey];
         NSString* description = [[dict objectForKey:kPetRecordDescriptionKey] objectForKey:kPFAPIContentKey];
-        NSDate* lastUpdate = [[dict objectForKey:kPetRecordLastUpdateKey] objectForKey:kPFAPIContentKey];
+        NSString* lastUpdate = [[dict objectForKey:kPetRecordLastUpdateKey] objectForKey:kPFAPIContentKey];
+        NSDate* lastUpdateDate;
+        if (lastUpdate) {
+            NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateFormat:@"yyyy-MM-ddTOHH:mm:ss"];
+            [dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
+            lastUpdateDate = [dateFormatter dateFromString:lastUpdate];
+        }
         NSString* status = [[dict objectForKey:kPFAPIStatusKey] objectForKey:kPFAPIContentKey];
         NSDictionary* media = [dict objectForKey:kPetRecordMediaKey];
         NSDictionary* contact = [dict objectForKey:kPetRecordContactKey];
@@ -42,7 +49,7 @@
         _sizeType = VALUE_OR_DEFAULT([PFPetSizeType sizeTypeWithSize:size], [PFPetSizeType new]);
         _optionsList = VALUE_OR_DEFAULT([PFPetOptionList optionsListFromOptions:options], [PFPetOptionList new]);
         _description = VALUE_OR_DEFAULT(description, kPFUnkown);
-        _lastUpdate = lastUpdate; // Can be nil
+        _lastUpdate = VALUE_OR_DEFAULT(lastUpdateDate, [NSDate date]);
         _statusType = VALUE_OR_DEFAULT([PFPetStatusType statusTypeWithStatus:status], [PFPetStatusType new]);
         _mediaType = VALUE_OR_DEFAULT([PFPetMediaType mediaTypeWithMediaDictionary:media], [PFPetMediaType new]);
         _shelter = VALUE_OR_DEFAULT([PFShelterRecord shelterRecordFromDictionary:contact], [PFShelterRecord new]);
@@ -93,6 +100,16 @@
 {
     for (PFPetPhotoType* photoType in self.mediaType.photos) {
         if ([photoType.size isEqualToString:kPetPhotoTKey]) {
+            return photoType;
+        }
+    }
+    return nil;
+}
+
+- (PFPetPhotoType*)defaultHiRes
+{
+    for (PFPetPhotoType* photoType in self.mediaType.photos) {
+        if ([photoType.size isEqualToString:kPetPhotoXKey]) {
             return photoType;
         }
     }

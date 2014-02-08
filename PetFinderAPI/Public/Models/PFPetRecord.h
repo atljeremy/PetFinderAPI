@@ -82,5 +82,6 @@
 - (NSString*)cityStateZip;
 - (void)setCoordinate:(CLLocationCoordinate2D)coordinate;
 - (PFPetPhotoType*)defaultThumbnail;
+- (PFPetPhotoType*)defaultHiRes;
 
 @end
