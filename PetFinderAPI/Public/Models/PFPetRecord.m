@@ -8,6 +8,12 @@
 
 #import "PFPetRecord.h"
 
+@interface PFPetRecord()
+@property (nonatomic, strong) PFPetPhotoType* defaultThumbnailPhoto;
+@property (nonatomic, strong) PFPetPhotoType* defaultHiResPhoto;
+@property (nonatomic, strong) PFPetPhotoType* defaultMedResPhoto;
+@end
+
 @implementation PFPetRecord
 
 - (id)initWithPetRecordDictionary:(NSDictionary*)dict
@@ -98,21 +104,49 @@
 
 - (PFPetPhotoType*)defaultThumbnail
 {
+    if (self.defaultThumbnailPhoto) {
+        return self.defaultThumbnailPhoto;
+    }
+    
     for (PFPetPhotoType* photoType in self.mediaType.photos) {
         if ([photoType.size isEqualToString:kPetPhotoTKey]) {
+            self.defaultThumbnailPhoto = photoType;
             return photoType;
         }
     }
+    
+    return nil;
+}
+
+- (PFPetPhotoType*)defaultMedRes
+{
+    if (self.defaultMedResPhoto) {
+        return self.defaultMedResPhoto;
+    }
+    
+    for (PFPetPhotoType* photoType in self.mediaType.photos) {
+        if ([photoType.size isEqualToString:kPetPhotoPNKey]) {
+            self.defaultMedResPhoto = photoType;
+            return photoType;
+        }
+    }
+    
     return nil;
 }
 
 - (PFPetPhotoType*)defaultHiRes
 {
+    if (self.defaultHiResPhoto) {
+        return self.defaultHiResPhoto;
+    }
+    
     for (PFPetPhotoType* photoType in self.mediaType.photos) {
         if ([photoType.size isEqualToString:kPetPhotoXKey]) {
+            self.defaultHiResPhoto = photoType;
             return photoType;
         }
     }
+    
     return nil;
 }
 
