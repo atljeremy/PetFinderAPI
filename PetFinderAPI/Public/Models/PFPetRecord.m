@@ -109,7 +109,7 @@
     }
     
     for (PFPetPhotoType* photoType in self.mediaType.photos) {
-        if ([photoType.size isEqualToString:kPetPhotoTKey]) {
+        if ([photoType.size isEqualToString:kPetPhotoFPMKey]) {
             self.defaultThumbnailPhoto = photoType;
             return photoType;
         }
