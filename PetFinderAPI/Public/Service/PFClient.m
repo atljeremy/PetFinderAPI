@@ -49,6 +49,28 @@ static PFClient* _sharedInstance = nil;
     return _sharedInstance;
 }
 
++ (void)cancelAllRequests
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager.operationQueue cancelAllOperations];
+}
+
++ (void)cancelRequest:(PFBaseRequest*)request
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    for (NSOperation *operation in [manager.operationQueue operations]) {
+        if (![operation isKindOfClass:[AFHTTPRequestOperation class]]) {
+            continue;
+        }
+        
+        BOOL hasMatchingPath = [((AFHTTPRequestOperation *)operation).request.URL.path isEqualToString:request.urlWithParams];
+        
+        if (hasMatchingPath) {
+            [operation cancel];
+        }
+    }
+}
+
 + (void)executePFBreedListRequest:(PFBreedListRequest*)request
                           success:(void (^)(PFBreedList* breedList, PFBreedListRequest* request))success
                           failure:(void (^)(PFBreedListRequest* request, NSError *error))failure

@@ -22,6 +22,17 @@
  */
 + (instancetype)sharedInstance;
 
+/**
+ * @return Use this to cancel all current requests. All request types that have been started but not complete will be cancelled.
+ */
++ (void)cancelAllRequests;
+
+/**
+ * @return Cancels a single request.
+ * @param The request to be cancelled.
+ */
++ (void)cancelRequest:(PFBaseRequest*)request;
+
 + (void)executePFBreedListRequest:(PFBreedListRequest*)request
                           success:(void (^)(PFBreedList* breedList, PFBreedListRequest* request))success
                           failure:(void (^)(PFBreedListRequest* request, NSError *error))failure;
