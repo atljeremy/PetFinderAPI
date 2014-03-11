@@ -25,7 +25,7 @@ NSString* const kPFAPILatitudeKey   = @"latitude";
 NSString* const kPFAPILongitudeKey  = @"longitude";
 NSString* const kPFAPIStatusKey     = @"status";
 
-NSString* const kPFUnkown = @"Unkown";
+NSString* const kPFUnknown = @"Unknown";
 
 NSString* const kPetRecordPetsKey           = @"pets";
 NSString* const kPetRecordPetKey            = @"pet";

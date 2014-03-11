@@ -31,7 +31,7 @@
     if (_animal) {
         return _animal;
     }
-    return @"Unkown";
+    return @"Unknown";
 }
 
 @end

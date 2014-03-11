@@ -25,7 +25,7 @@ extern NSString* const kPFAPILatitudeKey;
 extern NSString* const kPFAPILongitudeKey;
 extern NSString* const kPFAPIStatusKey;
 
-extern NSString* const kPFUnkown;
+extern NSString* const kPFUnknown;
 
 extern NSString* const kPetRecordPetsKey;
 extern NSString* const kPetRecordPetKey;

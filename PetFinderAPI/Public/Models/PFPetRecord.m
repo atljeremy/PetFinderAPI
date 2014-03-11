@@ -45,16 +45,16 @@
         
         _petID = VALUE_OR_DEFAULT([PFPetIDType petIDTypeWithID:identifier], [PFPetIDType new]);
         _shelterID = VALUE_OR_DEFAULT([PFShelterIDType shelterIDTypeWithID:shelterID], [PFShelterIDType new]);
-        _shelterPetID = VALUE_OR_DEFAULT(shelterPetID, kPFUnkown);
-        _name = VALUE_OR_DEFAULT(name, kPFUnkown);
+        _shelterPetID = VALUE_OR_DEFAULT(shelterPetID, kPFUnknown);
+        _name = VALUE_OR_DEFAULT(name, kPFUnknown);
         _animalType = VALUE_OR_DEFAULT([PFAnimalType animalTypeWithAnimal:animal], [PFAnimalType new]);
         _breedsList = VALUE_OR_DEFAULT([PFBreedList breedListFromBreedsDictionary:breeds], [PFBreedList new]);
-        _mix = VALUE_OR_DEFAULT(mix, kPFUnkown);
+        _mix = VALUE_OR_DEFAULT(mix, kPFUnknown);
         _ageType = VALUE_OR_DEFAULT([PFPetAgeType ageTypeWithAge:age], [PFPetAgeType new]);
         _genderType = VALUE_OR_DEFAULT([PFPetGenderType genderTypeWithGender:gender], [PFPetGenderType new]);
         _sizeType = VALUE_OR_DEFAULT([PFPetSizeType sizeTypeWithSize:size], [PFPetSizeType new]);
         _optionsList = VALUE_OR_DEFAULT([PFPetOptionList optionsListFromOptions:options], [PFPetOptionList new]);
-        _description = VALUE_OR_DEFAULT(description, kPFUnkown);
+        _description = VALUE_OR_DEFAULT(description, kPFUnknown);
         _lastUpdate = VALUE_OR_DEFAULT(lastUpdateDate, [NSDate date]);
         _statusType = VALUE_OR_DEFAULT([PFPetStatusType statusTypeWithStatus:status], [PFPetStatusType new]);
         _mediaType = VALUE_OR_DEFAULT([PFPetMediaType mediaTypeWithMediaDictionary:media], [PFPetMediaType new]);
