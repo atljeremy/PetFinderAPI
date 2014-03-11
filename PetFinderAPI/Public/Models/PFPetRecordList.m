@@ -10,9 +10,14 @@
 
 static NSString* const kPetRecordListLastOffsetKey = @"lastOffset";
 
+@interface PFPetRecordList()
+@property (nonatomic, strong, readwrite) NSArray* pets;
+@property (nonatomic, strong, readwrite) NSString* lastOffset;
+@end
+
 @implementation PFPetRecordList
 
-- (id)initWithPets:(NSArray*)pets forLastOffset:(NSNumber*)lastOffset {
+- (id)initWithPets:(NSArray*)pets forLastOffset:(NSString*)lastOffset {
     if (self = [super init]) {
         _pets = pets;
         _lastOffset = lastOffset;
@@ -29,7 +34,7 @@ static NSString* const kPetRecordListLastOffsetKey = @"lastOffset";
     return [[self alloc] initWithPets:[self parsePets:petDict] forLastOffset:[self parseLastOffset:petDict]];
 }
 
-+ (instancetype)petRecordListWithPets:(NSArray*)pets andLastOffset:(NSNumber*)lastOffset
++ (instancetype)petRecordListWithPets:(NSArray*)pets andLastOffset:(NSString*)lastOffset
 {
     if (!pets || pets.count == 0 || !lastOffset) {
         return nil;
@@ -38,7 +43,7 @@ static NSString* const kPetRecordListLastOffsetKey = @"lastOffset";
     return [[self alloc] initWithPets:pets forLastOffset:lastOffset];
 }
 
-+ (NSNumber*)parseLastOffset:(NSDictionary*)petDict
++ (NSString*)parseLastOffset:(NSDictionary*)petDict
 {
     return [[petDict objectForKey:kPetRecordListLastOffsetKey] objectForKey:kPFAPIContentKey];
 }

@@ -17,9 +17,9 @@
 @interface PFPetRecordList : NSObject
 
 @property (nonatomic, strong, readonly) NSArray* pets;
-@property (nonatomic, strong, readonly) NSNumber* lastOffset;
+@property (nonatomic, strong, readonly) NSString* lastOffset;
 
 + (instancetype)petRecordListFromDictionary:(NSDictionary*)petDict;
-+ (instancetype)petRecordListWithPets:(NSArray*)pets andLastOffset:(NSNumber*)lastOffset;
++ (instancetype)petRecordListWithPets:(NSArray*)pets andLastOffset:(NSString*)lastOffset;
 
 @end
