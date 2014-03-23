@@ -11,11 +11,11 @@
 @interface NSString (Extras)
 
 - (BOOL)isEmpty;
-- (NSString *)stringFromMD5;
+- (NSString*)stringFromMD5;
 - (NSString*)urlEncodedString;
 - (NSString*)urlDecodedString;
-- (NSString *)stringByAppendingQueryParameters:(NSDictionary *)queryParameters;
-- (NSString *)stringByReplacingURLEncoding;
-- (NSArray *)keyValueArrayFromQuery;
+- (NSString*)stringByAppendingQueryParameters:(NSDictionary *)queryParameters;
+- (NSString*)stringByReplacingURLEncoding;
+- (NSArray*)keyValueArrayFromQuery;
 
 @end
