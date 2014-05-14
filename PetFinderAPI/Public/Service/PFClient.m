@@ -98,7 +98,7 @@ static PFClient* _sharedInstance = nil;
         if (petRecord.petID.identifier && petRecord.petID.identifier.length > 0) {
             if (success) success(petRecord, request);
         } else {
-            if (failure) failure(request, [PFErrors errorForNoPetRecordAvailable]);
+            if (failure) failure(request, [PFError errorForNoPetRecordAvailable]);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (failure) failure(request, error);
@@ -118,14 +118,14 @@ static PFClient* _sharedInstance = nil;
             if (petRecord.petID.identifier && petRecord.petID.identifier.length > 0) {
                 if (success) success(petRecord, request);
             } else {
-                if (failure) failure(request, [PFErrors errorForNoPetRecordAvailable]);
+                if (failure) failure(request, [PFError errorForNoPetRecordAvailable]);
             }
         } else {
             PFPetRecord* petRecord = [PFPetRecord petRecordFromDictionary:[petRecords randomObject]];
             if (petRecord.petID.identifier && petRecord.petID.identifier.length > 0) {
                 if (success) success(petRecord, request);
             } else {
-                if (failure) failure(request, [PFErrors errorForNoPetRecordAvailable]);
+                if (failure) failure(request, [PFError errorForNoPetRecordAvailable]);
             }
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -144,10 +144,10 @@ static PFClient* _sharedInstance = nil;
         if (petRecordList.pets && petRecordList.pets.count > 0) {
             if (success) success(petRecordList, request);
         } else {
-            if (failure) failure(request, [PFErrors errorForNoPetRecordAvailable]);
+            if (failure) failure(request, [PFError errorForNoPetRecordAvailable]);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        if (failure) failure(request, error);
+        if (failure) failure(request, [PFError errorForSearchFailure]);
     }];
 }
 
@@ -162,7 +162,7 @@ static PFClient* _sharedInstance = nil;
         if (shelterRecordList.shelters && shelterRecordList.shelters.count > 0) {
             if (success) success(shelterRecordList, request);
         } else {
-            if (failure) failure(request, [PFErrors errorForNoPetRecordAvailable]);
+            if (failure) failure(request, [PFError errorForNoPetRecordAvailable]);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (failure) failure(request, error);
@@ -181,7 +181,7 @@ static PFClient* _sharedInstance = nil;
         if (shelterRecord.shelterID.identifier && shelterRecord.shelterID.identifier.length > 0) {
             if (success) success(shelterRecord, request);
         } else {
-            if (failure) failure(request, [PFErrors errorForNoPetRecordAvailable]);
+            if (failure) failure(request, [PFError errorForNoPetRecordAvailable]);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (failure) failure(request, error);
@@ -199,7 +199,7 @@ static PFClient* _sharedInstance = nil;
         if (petRecordList.pets && petRecordList.pets.count > 0) {
             if (success) success(petRecordList, request);
         } else {
-            if (failure) failure(request, [PFErrors errorForNoPetRecordAvailable]);
+            if (failure) failure(request, [PFError errorForNoPetRecordAvailable]);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (failure) failure(request, error);
@@ -217,7 +217,7 @@ static PFClient* _sharedInstance = nil;
         if (shelterRecordList.shelters && shelterRecordList.shelters.count > 0) {
             if (success) success(shelterRecordList, request);
         } else {
-            if (failure) failure(request, [PFErrors errorForNoPetRecordAvailable]);
+            if (failure) failure(request, [PFError errorForNoPetRecordAvailable]);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (failure) failure(request, error);

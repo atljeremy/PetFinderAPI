@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PFErrors : NSObject
+@interface PFError : NSError
 
-+ (NSError*)errorForNoPetRecordAvailable;
++ (instancetype)errorForNoPetRecordAvailable;
+
++ (instancetype)errorForSearchFailure;
 
 @end

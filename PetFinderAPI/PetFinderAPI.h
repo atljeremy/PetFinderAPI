@@ -19,7 +19,7 @@
 
 // Models
 #import <PetFinderAPI/PFExceptions.h>
-#import <PetFinderAPI/PFErrors.h>
+#import <PetFinderAPI/PFError.h>
 #import <PetFinderAPI/PFAnimalType.h>
 #import <PetFinderAPI/PFPetIDType.h>
 #import <PetFinderAPI/PFPetIDList.h>

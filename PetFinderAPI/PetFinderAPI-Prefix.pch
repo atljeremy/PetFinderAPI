@@ -6,9 +6,10 @@
 
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
-    #import <PetFinderAPI/PetFinderAPI.h>
     #import "PFMacros.h"
     #import "AFNetworking.h"
+    #import "PFError.h"
+    #import <PetFinderAPI/PetFinderAPI.h>
 #endif
 
 

@@ -69,8 +69,8 @@
 		1A75E513187C7D8F00961844 /* NSDictionary+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A75E50D187C7D8F00961844 /* NSDictionary+Extras.m */; };
 		1A75E514187C7D8F00961844 /* NSString+Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A75E50E187C7D8F00961844 /* NSString+Extras.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A75E515187C7D8F00961844 /* NSString+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A75E50F187C7D8F00961844 /* NSString+Extras.m */; };
-		1A75E518187C7DAE00961844 /* PFErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A75E516187C7DAE00961844 /* PFErrors.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1A75E519187C7DAE00961844 /* PFErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A75E517187C7DAE00961844 /* PFErrors.m */; };
+		1A75E518187C7DAE00961844 /* PFError.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A75E516187C7DAE00961844 /* PFError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A75E519187C7DAE00961844 /* PFError.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A75E517187C7DAE00961844 /* PFError.m */; };
 		1A75E51C187C7DC100961844 /* PFExceptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A75E51A187C7DC100961844 /* PFExceptions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A75E51D187C7DC100961844 /* PFExceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A75E51B187C7DC100961844 /* PFExceptions.m */; };
 		1A75E520187C7DE900961844 /* PFClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A75E51E187C7DE900961844 /* PFClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -209,8 +209,8 @@
 		1A75E50D187C7D8F00961844 /* NSDictionary+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Extras.m"; sourceTree = "<group>"; };
 		1A75E50E187C7D8F00961844 /* NSString+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extras.h"; sourceTree = "<group>"; };
 		1A75E50F187C7D8F00961844 /* NSString+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extras.m"; sourceTree = "<group>"; };
-		1A75E516187C7DAE00961844 /* PFErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFErrors.h; sourceTree = "<group>"; };
-		1A75E517187C7DAE00961844 /* PFErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFErrors.m; sourceTree = "<group>"; };
+		1A75E516187C7DAE00961844 /* PFError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFError.h; sourceTree = "<group>"; };
+		1A75E517187C7DAE00961844 /* PFError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFError.m; sourceTree = "<group>"; };
 		1A75E51A187C7DC100961844 /* PFExceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFExceptions.h; sourceTree = "<group>"; };
 		1A75E51B187C7DC100961844 /* PFExceptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFExceptions.m; sourceTree = "<group>"; };
 		1A75E51E187C7DE900961844 /* PFClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFClient.h; sourceTree = "<group>"; };
@@ -463,8 +463,8 @@
 		1A75E505187C7C8800961844 /* Errors */ = {
 			isa = PBXGroup;
 			children = (
-				1A75E516187C7DAE00961844 /* PFErrors.h */,
-				1A75E517187C7DAE00961844 /* PFErrors.m */,
+				1A75E516187C7DAE00961844 /* PFError.h */,
+				1A75E517187C7DAE00961844 /* PFError.m */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -640,7 +640,7 @@
 				1A372A36187DD17000129211 /* AFSecurityPolicy.h in Headers */,
 				1A75E58D187C93B600961844 /* PFPetMediaType.h in Headers */,
 				1A75E520187C7DE900961844 /* PFClient.h in Headers */,
-				1A75E518187C7DAE00961844 /* PFErrors.h in Headers */,
+				1A75E518187C7DAE00961844 /* PFError.h in Headers */,
 				1A372A3A187DD17000129211 /* AFURLRequestSerialization.h in Headers */,
 				1A372919187DB30B00129211 /* PFPetVideoType.h in Headers */,
 				1A4545BD187D0B1B00A33EF8 /* NSObject+Extras.h in Headers */,
@@ -770,7 +770,7 @@
 				1A372A2E187DD17000129211 /* AFHTTPRequestOperation.m in Sources */,
 				1A75E57B187C8B6000961844 /* PFPetPhotoType.m in Sources */,
 				1A75E587187C8C7800961844 /* PFPetIDList.m in Sources */,
-				1A75E519187C7DAE00961844 /* PFErrors.m in Sources */,
+				1A75E519187C7DAE00961844 /* PFError.m in Sources */,
 				1A75E551187C89B500961844 /* PFPetContactType.m in Sources */,
 				1A372A3B187DD17000129211 /* AFURLRequestSerialization.m in Sources */,
 				1A372A32187DD17000129211 /* AFHTTPSessionManager.m in Sources */,
