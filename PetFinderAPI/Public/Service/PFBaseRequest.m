@@ -17,7 +17,6 @@ static NSString* const kPFAPIOutputDefaultValue = @"full";
 
 @interface PFBaseRequest()
 @property (nonatomic, strong, readwrite) NSString* baseURL;
-@property (nonatomic, strong, readwrite) NSString* apiKey;
 @property (nonatomic, strong, readwrite) NSString* token;
 @end
 
@@ -31,12 +30,11 @@ static NSString* const kPFAPIOutputDefaultValue = @"full";
 - (instancetype)initWithPath:(NSString*)path_
 {
     if (self = [super init]) {
-        _apiKey = [PFClient sharedInstance].apiKey;
         _token = nil;
         _output = kPFAPIOutputDefaultValue;
         _baseURL = kPFAPIBaseURL;
         _path = path_;
-        _params = [@{kPFAPIKey: _apiKey, kPFAPIFormat: kPFAPIFormatDefaultValue, kPFAPIOutput: _output} mutableCopy];
+        _params = [@{} mutableCopy];
     }
     return self;
 }
@@ -45,6 +43,7 @@ static NSString* const kPFAPIOutputDefaultValue = @"full";
 {
     if (!self.baseURL) return nil;
     if (self.params) {
+        [self.params addEntriesFromDictionary:@{kPFAPIKey: PFClient.sharedInstance.apiKey, kPFAPIFormat: kPFAPIFormatDefaultValue, kPFAPIOutput: _output}];
         NSString* params = [self.params stringFromURLEncodedQueryParams];
         return [self.baseURL stringByAppendingFormat:@"%@?%@", self.path, params];
     } else {

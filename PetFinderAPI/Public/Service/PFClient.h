@@ -11,11 +11,17 @@
 @interface PFClient : NSObject
 
 @property (nonatomic, strong, readonly) NSString* apiKey;
+@property (nonatomic, strong, readonly) NSString* backupKey;
 
 /**
  * @return Use this static method to initialize the PFClient. You must provide a PetFinder API Key or an PFInvalidPFCLientInitializationException will be thrown.
  */
 + (instancetype)initializeWithAPIKey:(NSString*)apiKey;
+
+/**
+ * @return Use this to set a main API key as-well-as a backup API key that can be used if the main key reaches a usage limit or starts experiencing other issues causing probalems in returning data
+ */
++ (instancetype)initializeWithAPIKey:(NSString*)apiKey backupKey:(NSString*)backupKey;
 
 /**
  * @return Used to access the single isntance of PFCLient. Note, you must initialize PFClient using initializeWithAPIKey: BEFORE trying to access the sharedInstance;

@@ -8,8 +8,18 @@
 
 #import "PFClient.h"
 
+typedef NS_ENUM(NSInteger, kPFClientAPIKeyStatus) {
+    kPFClientAPIKeyStatusActive,
+    kPFClientAPIKeyStatusInvalid
+};
+
+static NSString* const kPFClientKeyCurrentKey = @"current_api_key_key";
+static NSString* const kPFClientKeyStatusKey = @"current_api_key_status_key";
+
 @interface PFClient()
 @property (nonatomic, strong, readwrite) NSString* apiKey;
+@property (nonatomic, strong, readwrite) NSString* backupKey;
+@property (nonatomic, assign, getter = isUsingBackupKey) BOOL usingBackupKey;
 @end
 
 @implementation PFClient
@@ -28,14 +38,29 @@ static PFClient* _sharedInstance = nil;
     return _sharedInstance;
 }
 
-- (id)initWithAPIKey:(NSString*)apiKey {
+- (id)initWithAPIKey:(NSString*)apiKey
+{
+    return [self initWithAPIKey:apiKey backupKey:nil];
+}
+
+- (id)initWithAPIKey:(NSString*)apiKey backupKey:(NSString*)backupKey
+{
+    NSParameterAssert(apiKey);
+    
     if (self = [super init]) {
         _apiKey = apiKey;
+        _backupKey= backupKey;
+        _usingBackupKey = NO;
     }
     return self;
 }
 
 + (instancetype)initializeWithAPIKey:(NSString *)apiKey
+{
+    return [self initializeWithAPIKey:apiKey backupKey:nil];
+}
+
++ (instancetype)initializeWithAPIKey:(NSString*)apiKey backupKey:(NSString*)backupKey
 {
     if (_sharedInstance) {
         @throw [PFExceptions invalidInitializationExceptionPFCLient];
@@ -43,11 +68,34 @@ static PFClient* _sharedInstance = nil;
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedInstance = [[self alloc] initWithAPIKey:apiKey];
+        _sharedInstance = [[self alloc] initWithAPIKey:apiKey backupKey:backupKey];
     });
     
     return _sharedInstance;
 }
+
+#pragma mark ----------------------
+#pragma mark Key Exchange
+#pragma mark ----------------------
+
+- (BOOL)exchangeAPIKey
+{
+    BOOL retVal = NO;
+    if (self.backupKey) {
+        NSString* apiKey = self.apiKey;
+        NSString* backupKey = self.backupKey;
+        self.backupKey = apiKey;
+        self.apiKey = backupKey;
+        self.usingBackupKey = !self.usingBackupKey;
+        retVal = YES;
+    }
+    
+    return retVal;
+}
+
+#pragma mark ----------------------
+#pragma mark Request Handling
+#pragma mark ----------------------
 
 + (void)cancelAllRequests
 {
@@ -82,7 +130,14 @@ static PFClient* _sharedInstance = nil;
         PFBreedList* breedList = [PFBreedList breedListFromBreedsDictionary:breedsDict];
         if (success) success(breedList, request);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        if (failure) failure(request, error);
+        if (!PFClient.sharedInstance.isUsingBackupKey && [[PFClient sharedInstance] exchangeAPIKey]) {
+            [self executePFBreedListRequest:request success:success failure:failure];
+        } else {
+            if (failure) failure(request, error);
+            if (PFClient.sharedInstance.isUsingBackupKey) {
+                [[PFClient sharedInstance] exchangeAPIKey];
+            }
+        }
     }];
 }
 
@@ -101,7 +156,14 @@ static PFClient* _sharedInstance = nil;
             if (failure) failure(request, [PFError errorForNoPetRecordAvailable]);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        if (failure) failure(request, error);
+        if (!PFClient.sharedInstance.isUsingBackupKey && [[PFClient sharedInstance] exchangeAPIKey]) {
+            [self executePFPetGetRequest:request success:success failure:failure];
+        } else {
+            if (failure) failure(request, error);
+            if (PFClient.sharedInstance.isUsingBackupKey) {
+                [[PFClient sharedInstance] exchangeAPIKey];
+            }
+        }
     }];
 }
 
@@ -129,7 +191,14 @@ static PFClient* _sharedInstance = nil;
             }
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        if (failure) failure(request, error);
+        if (!PFClient.sharedInstance.isUsingBackupKey && [[PFClient sharedInstance] exchangeAPIKey]) {
+            [self executePFPetGetRandomRequest:request success:success failure:failure];
+        } else {
+            if (failure) failure(request, error);
+            if (PFClient.sharedInstance.isUsingBackupKey) {
+                [[PFClient sharedInstance] exchangeAPIKey];
+            }
+        }
     }];
 }
 
@@ -147,7 +216,14 @@ static PFClient* _sharedInstance = nil;
             if (failure) failure(request, [PFError errorForNoPetRecordAvailable]);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        if (failure) failure(request, [PFError errorForSearchFailure]);
+        if (!PFClient.sharedInstance.isUsingBackupKey && [[PFClient sharedInstance] exchangeAPIKey]) {
+            [self executePFPetFindRequest:request success:success failure:failure];
+        } else {
+            if (failure) failure(request, [PFError errorForSearchFailure]);
+            if (PFClient.sharedInstance.isUsingBackupKey) {
+                [[PFClient sharedInstance] exchangeAPIKey];
+            }
+        }
     }];
 }
 
@@ -165,7 +241,14 @@ static PFClient* _sharedInstance = nil;
             if (failure) failure(request, [PFError errorForNoPetRecordAvailable]);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        if (failure) failure(request, error);
+        if (!PFClient.sharedInstance.isUsingBackupKey && [[PFClient sharedInstance] exchangeAPIKey]) {
+            [self executePFShelterFindRequest:request success:success failure:failure];
+        } else {
+            if (failure) failure(request, error);
+            if (PFClient.sharedInstance.isUsingBackupKey) {
+                [[PFClient sharedInstance] exchangeAPIKey];
+            }
+        }
     }];
 }
 
@@ -184,7 +267,14 @@ static PFClient* _sharedInstance = nil;
             if (failure) failure(request, [PFError errorForNoPetRecordAvailable]);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        if (failure) failure(request, error);
+        if (!PFClient.sharedInstance.isUsingBackupKey && [[PFClient sharedInstance] exchangeAPIKey]) {
+            [self executePFShelterGetRequest:request success:success failure:failure];
+        } else {
+            if (failure) failure(request, error);
+            if (PFClient.sharedInstance.isUsingBackupKey) {
+                [[PFClient sharedInstance] exchangeAPIKey];
+            }
+        }
     }];
 }
 
@@ -202,7 +292,14 @@ static PFClient* _sharedInstance = nil;
             if (failure) failure(request, [PFError errorForNoPetRecordAvailable]);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        if (failure) failure(request, error);
+        if (!PFClient.sharedInstance.isUsingBackupKey && [[PFClient sharedInstance] exchangeAPIKey]) {
+            [self executePFShelterGetPetsRequest:request success:success failure:failure];
+        } else {
+            if (failure) failure(request, error);
+            if (PFClient.sharedInstance.isUsingBackupKey) {
+                [[PFClient sharedInstance] exchangeAPIKey];
+            }
+        }
     }];
 }
 
@@ -220,7 +317,14 @@ static PFClient* _sharedInstance = nil;
             if (failure) failure(request, [PFError errorForNoPetRecordAvailable]);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        if (failure) failure(request, error);
+        if (!PFClient.sharedInstance.isUsingBackupKey && [[PFClient sharedInstance] exchangeAPIKey]) {
+            [self executePFShelterListByBreedRequest:request success:success failure:failure];
+        } else {
+            if (failure) failure(request, error);
+            if (PFClient.sharedInstance.isUsingBackupKey) {
+                [[PFClient sharedInstance] exchangeAPIKey];
+            }
+        }
     }];
 }
 

@@ -16,11 +16,6 @@
 @property (nonatomic, strong, readonly) NSString* baseURL;
 
 /**
- * @return The specific Pet Finder API Key to use for the request. This is set using the [PFClient initializeWithAPIKey:@"yourKeyHere"] method. Readonly.
- */
-@property (nonatomic, strong, readonly) NSString* apiKey;
-
-/**
  * @return Pet Finder authentication token to use for signing requests. Optional, Readonly.
  */
 @property (nonatomic, strong, readonly) NSString* token;
