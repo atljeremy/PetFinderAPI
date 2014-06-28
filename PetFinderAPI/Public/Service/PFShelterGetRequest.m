@@ -14,8 +14,9 @@
 
 @implementation PFShelterGetRequest
 
-- (id)initWithShelterID:(NSString*)shelterID {
-    if (self = [super initWithPath:@"shelter.get"]) {
+- (id)initWithShelterID:(NSString*)shelterID
+{
+    if (shelterID && (self = [super initWithPath:@"shelter.get"])) {
         _shelterID = shelterID;
         [self.params setObject:_shelterID forKey:kPFAPIIDKey];
     }
