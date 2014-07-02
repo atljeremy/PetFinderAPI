@@ -210,11 +210,20 @@ static PFClient* _sharedInstance = nil;
     [manager GET:request.urlWithParams parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary* petFinderDict = [responseObject objectForKey:kPFAPIPetFinderKey];
         PFPetRecordList* petRecordList = [PFPetRecordList petRecordListFromDictionary:petFinderDict];
-        if (petRecordList.pets && petRecordList.pets.count > 0) {
-            if (success) success(petRecordList, request);
-        } else {
-            if (failure) failure(request, [PFError errorForNoPetRecordAvailable]);
-        }
+        
+#warning Backup plan if PetFinder will not address the sex KVP being ingorned on the server side
+//        NSMutableArray* petsCopy = [petRecordList.pets mutableCopy];
+//        NSString* sex = [request.params objectForKey:kPetRecordSexKey];
+//        if (sex && sex.length > 0) {
+//            [petsCopy enumerateObjectsUsingBlock:^(PFPetRecord* record, NSUInteger idx, BOOL *stop) {
+//                if (![record.genderType.gender isEqualToString:sex]) {
+//                    [petsCopy removeObject:record];
+//                }
+//            }];
+//            petRecordList = [PFPetRecordList petRecordListWithPets:petsCopy andLastOffset:petRecordList.lastOffset];
+//        }
+        
+        if (success) success(petRecordList, request);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (!PFClient.sharedInstance.isUsingBackupKey && [[PFClient sharedInstance] exchangeAPIKey]) {
             [self executePFPetFindRequest:request success:success failure:failure];
@@ -235,11 +244,7 @@ static PFClient* _sharedInstance = nil;
     [manager GET:request.urlWithParams parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary* petFinderDict = [responseObject objectForKey:kPFAPIPetFinderKey];
         PFShelterRecordList* shelterRecordList = [PFShelterRecordList shelterRecordListFromDictionary:petFinderDict];
-        if (shelterRecordList.shelters && shelterRecordList.shelters.count > 0) {
-            if (success) success(shelterRecordList, request);
-        } else {
-            if (failure) failure(request, [PFError errorForNoPetRecordAvailable]);
-        }
+        if (success) success(shelterRecordList, request);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (!PFClient.sharedInstance.isUsingBackupKey && [[PFClient sharedInstance] exchangeAPIKey]) {
             [self executePFShelterFindRequest:request success:success failure:failure];
@@ -261,11 +266,7 @@ static PFClient* _sharedInstance = nil;
         NSDictionary* petFinderDict = [responseObject objectForKey:kPFAPIPetFinderKey];
         NSDictionary* shelterDict = [petFinderDict objectForKey:kShelterRecordShelterKey];
         PFShelterRecord* shelterRecord = [PFShelterRecord shelterRecordFromDictionary:shelterDict];
-        if (shelterRecord.shelterID.identifier && shelterRecord.shelterID.identifier.length > 0) {
-            if (success) success(shelterRecord, request);
-        } else {
-            if (failure) failure(request, [PFError errorForNoPetRecordAvailable]);
-        }
+        if (success) success(shelterRecord, request);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (!PFClient.sharedInstance.isUsingBackupKey && [[PFClient sharedInstance] exchangeAPIKey]) {
             [self executePFShelterGetRequest:request success:success failure:failure];
@@ -286,11 +287,7 @@ static PFClient* _sharedInstance = nil;
     [manager GET:request.urlWithParams parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary* petFinderDict = [responseObject objectForKey:kPFAPIPetFinderKey];
         PFPetRecordList* petRecordList = [PFPetRecordList petRecordListFromDictionary:petFinderDict];
-        if (petRecordList.pets && petRecordList.pets.count > 0) {
-            if (success) success(petRecordList, request);
-        } else {
-            if (failure) failure(request, [PFError errorForNoPetRecordAvailable]);
-        }
+        if (success) success(petRecordList, request);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (!PFClient.sharedInstance.isUsingBackupKey && [[PFClient sharedInstance] exchangeAPIKey]) {
             [self executePFShelterGetPetsRequest:request success:success failure:failure];
@@ -311,11 +308,7 @@ static PFClient* _sharedInstance = nil;
     [manager GET:request.urlWithParams parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary* petFinderDict = [responseObject objectForKey:kPFAPIPetFinderKey];
         PFShelterRecordList* shelterRecordList = [PFShelterRecordList shelterRecordListFromDictionary:petFinderDict];
-        if (shelterRecordList.shelters && shelterRecordList.shelters.count > 0) {
-            if (success) success(shelterRecordList, request);
-        } else {
-            if (failure) failure(request, [PFError errorForNoPetRecordAvailable]);
-        }
+        if (success) success(shelterRecordList, request);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (!PFClient.sharedInstance.isUsingBackupKey && [[PFClient sharedInstance] exchangeAPIKey]) {
             [self executePFShelterListByBreedRequest:request success:success failure:failure];
