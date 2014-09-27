@@ -68,7 +68,7 @@
 @property (nonatomic, strong) PFPetGenderType* genderType;
 @property (nonatomic, strong) PFPetSizeType* sizeType;
 @property (nonatomic, strong) PFPetOptionList* optionsList;
-@property (nonatomic, strong) NSString* description;
+@property (nonatomic, strong) NSString* petDescription;
 @property (nonatomic, strong) NSDate* lastUpdate;
 @property (nonatomic, strong) PFPetStatusType* statusType;
 @property (nonatomic, strong) PFPetMediaType* mediaType;

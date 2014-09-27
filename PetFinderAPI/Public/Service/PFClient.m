@@ -211,17 +211,21 @@ static PFClient* _sharedInstance = nil;
         NSDictionary* petFinderDict = [responseObject objectForKey:kPFAPIPetFinderKey];
         PFPetRecordList* petRecordList = [PFPetRecordList petRecordListFromDictionary:petFinderDict];
         
-#warning Backup plan if PetFinder will not address the sex KVP being ingorned on the server side
-//        NSMutableArray* petsCopy = [petRecordList.pets mutableCopy];
-//        NSString* sex = [request.params objectForKey:kPetRecordSexKey];
-//        if (sex && sex.length > 0) {
-//            [petsCopy enumerateObjectsUsingBlock:^(PFPetRecord* record, NSUInteger idx, BOOL *stop) {
-//                if (![record.genderType.gender isEqualToString:sex]) {
-//                    [petsCopy removeObject:record];
-//                }
-//            }];
-//            petRecordList = [PFPetRecordList petRecordListWithPets:petsCopy andLastOffset:petRecordList.lastOffset];
-//        }
+#warning TODO: Remove this section of code if PetFinder ever gets their shit together and fixes the damn gender filter bug!
+///////////////////////////////////////////////////////////////////////////////////
+        NSMutableArray* petsCopy = [petRecordList.pets mutableCopy];
+        NSMutableArray* recordsToRemove = [@[] mutableCopy];
+        NSString* sex = request.params[kPetRecordSexKey];
+        if (sex && sex.length > 0) {
+            [petsCopy enumerateObjectsUsingBlock:^(PFPetRecord* record, NSUInteger idx, BOOL *stop) {
+                if (![record.genderType.gender isEqualToString:sex]) {
+                    [recordsToRemove addObject:record];
+                }
+            }];
+            [petsCopy removeObjectsInArray:recordsToRemove];
+            petRecordList = [PFPetRecordList petRecordListWithPets:petsCopy andLastOffset:petRecordList.lastOffset];
+        }
+///////////////////////////////////////////////////////////////////////////////////
         
         if (success) success(petRecordList, request);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

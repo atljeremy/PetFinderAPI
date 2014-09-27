@@ -53,6 +53,8 @@ static dispatch_group_t http_request_operation_completion_group() {
 @end
 
 @implementation AFHTTPRequestOperation
+@synthesize response = _response;
+@synthesize request = _request;
 @dynamic lock;
 
 - (instancetype)initWithRequest:(NSURLRequest *)urlRequest {
