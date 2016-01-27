@@ -45,13 +45,8 @@
     return outputString;
 }
 
-- (NSString *)stringByReplacingURLEncoding
-{
-    return [self stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-}
-
 - (NSArray *)keyValueArrayFromQuery {
-    NSString* decodedQuery = [self stringByReplacingURLEncoding];
+    NSString* decodedQuery = [self stringByRemovingPercentEncoding];
     NSRange range = [decodedQuery rangeOfString:@"?"];
     
     NSString *trimmedQuery;
@@ -68,15 +63,7 @@
 }
 
 - (NSString*)urlEncodedString {
-    return CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL,
-                                                                     (CFStringRef)self,
-                                                                     NULL,
-                                                                     (CFStringRef)@"!*'\"();:@&=+$,/?%#[]% ",
-                                                                     CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding)));
-}
-
-- (NSString*)urlDecodedString {
-    return [self stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    return [self stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
 }
 
 @end

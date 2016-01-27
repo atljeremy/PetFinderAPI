@@ -32,13 +32,13 @@
     //</xs:simpleContent>
 //</xs:complexType>
 
-NSString* const kPetPhotoIDKey;
-NSString* const kPetPhotoSizeKey;
-NSString* const kPetPhotoXKey;
-NSString* const kPetPhotoTKey;
-NSString* const kPetPhotoPNKey;
-NSString* const kPetPhotoPNTKey;
-NSString* const kPetPhotoFPMKey;
+extern NSString* const kPetPhotoIDKey;
+extern NSString* const kPetPhotoSizeKey;
+extern NSString* const kPetPhotoXKey;
+extern NSString* const kPetPhotoTKey;
+extern NSString* const kPetPhotoPNKey;
+extern NSString* const kPetPhotoPNTKey;
+extern NSString* const kPetPhotoFPMKey;
 
 @interface PFPetPhotoType : NSObject
 

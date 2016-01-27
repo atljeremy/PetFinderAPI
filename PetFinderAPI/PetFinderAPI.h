@@ -2,11 +2,17 @@
 //  PetFinderAPI.h
 //  PetFinderAPI
 //
-//  Created by Jeremy Fox on 1/7/14.
-//  Copyright (c) 2014 Jeremy Fox. All rights reserved.
+//  Created by Jeremy Fox on 1/26/16.
+//  Copyright © 2016 Jeremy Fox. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+//! Project version number for PetFinderAPI.
+//FOUNDATION_EXPORT double PetFinderAPIVersionNumber;
+
+//! Project version string for PetFinderAPI.
+//FOUNDATION_EXPORT const unsigned char PetFinderAPIVersionString[];
+
+// In this header, you should import all the public headers of your framework using statements like #import <PetFinderAPI/PublicHeader.h>
 
 // Constants
 #import <PetFinderAPI/PFConstants.h>
@@ -16,6 +22,7 @@
 #import <PetFinderAPI/NSDictionary+Extras.h>
 #import <PetFinderAPI/NSString+Extras.h>
 #import <PetFinderAPI/NSArray+Extras.h>
+#import <PetFinderAPI/NSDate+Extras.h>
 
 // Models
 #import <PetFinderAPI/PFExceptions.h>
@@ -41,7 +48,6 @@
 #import <PetFinderAPI/PFShelterRecord.h>
 #import <PetFinderAPI/PFPetContactType.h>
 #import <PetFinderAPI/PFPetRecord.h>
-
 // Service
 #import <PetFinderAPI/PFBaseRequest.h>
 #import <PetFinderAPI/PFPetFindRequest.h>

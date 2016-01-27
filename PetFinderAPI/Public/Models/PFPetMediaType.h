@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-NSString* const kPetMediaPhotosIDKey;
-NSString* const kPetMediaPhotoIDKey;
-NSString* const kPetMediaVideosIDKey;
-NSString* const kPetMediaVideoIDKey;
+extern NSString* const kPetMediaPhotosIDKey;
+extern NSString* const kPetMediaPhotoIDKey;
+extern NSString* const kPetMediaVideosIDKey;
+extern NSString* const kPetMediaVideoIDKey;
 
 @interface PFPetMediaType : NSObject
 

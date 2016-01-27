@@ -13,9 +13,7 @@
 - (BOOL)isEmpty;
 - (NSString*)stringFromMD5;
 - (NSString*)urlEncodedString;
-- (NSString*)urlDecodedString;
 - (NSString*)stringByAppendingQueryParameters:(NSDictionary *)queryParameters;
-- (NSString*)stringByReplacingURLEncoding;
 - (NSArray*)keyValueArrayFromQuery;
 
 @end

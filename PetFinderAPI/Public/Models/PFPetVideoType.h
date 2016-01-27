@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-NSString* const kPetVideoIDKey;
-NSString* const kPetVideoSizeKey;
+extern NSString* const kPetVideoIDKey;
+extern NSString* const kPetVideoSizeKey;
 
 @interface PFPetVideoType : NSObject
 
