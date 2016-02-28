@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <MapKit/MapKit.h>
 
 //<xs:complexType name="petfinderPetRecord">
 //<xs:sequence>
@@ -55,7 +54,12 @@
 //</xs:sequence>
 //</xs:complexType>
 
+#if TARGET_OS_IOS
+    #import <MapKit/MapKit.h>
 @interface PFPetRecord : NSObject <MKAnnotation>
+#else
+@interface PFPetRecord : NSObject
+#endif
 
 @property (nonatomic, strong) PFPetIDType* petID;
 @property (nonatomic, strong) PFShelterIDType* shelterID;
@@ -73,14 +77,17 @@
 @property (nonatomic, strong) PFPetStatusType* statusType;
 @property (nonatomic, strong) PFPetMediaType* mediaType;
 @property (nonatomic, strong) PFShelterRecord* shelter;
+
+#if TARGET_OS_IOS
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;
+- (void)setCoordinate:(CLLocationCoordinate2D)coordinate;
+#endif
 
 + (instancetype)petRecordFromDictionary:(NSDictionary*)dict;
 
 - (NSString*)fullAddress;
 - (NSString*)cityState;
 - (NSString*)cityStateZip;
-- (void)setCoordinate:(CLLocationCoordinate2D)coordinate;
 - (PFPetPhotoType*)defaultThumbnail;
 - (PFPetPhotoType*)defaultHiRes;
 - (PFPetPhotoType*)defaultMedRes;

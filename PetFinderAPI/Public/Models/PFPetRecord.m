@@ -95,12 +95,14 @@
     return cityStateZip;
 }
 
+#if TARGET_OS_IOS
 - (void)setCoordinate:(CLLocationCoordinate2D)coordinate
 {
     [self willChangeValueForKey:@"coordinate"];
     _coordinate = coordinate;
     [self didChangeValueForKey:@"coordinate"];
 }
+#endif
 
 - (PFPetPhotoType*)defaultThumbnail
 {
