@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1A1625E01C81FA6E00CECCFE"
+               BlueprintIdentifier = "1A1625FF1C81FAA600CECCFE"
                BuildableName = "PetFinderAPITV.framework"
                BlueprintName = "PetFinderAPITV"
                ReferencedContainer = "container:PetFinderAPI.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1A1625E91C81FA6E00CECCFE"
+               BlueprintIdentifier = "1A1626081C81FAA700CECCFE"
                BuildableName = "PetFinderAPITVTests.xctest"
                BlueprintName = "PetFinderAPITVTests"
                ReferencedContainer = "container:PetFinderAPI.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1A1625E01C81FA6E00CECCFE"
+            BlueprintIdentifier = "1A1625FF1C81FAA600CECCFE"
             BuildableName = "PetFinderAPITV.framework"
             BlueprintName = "PetFinderAPITV"
             ReferencedContainer = "container:PetFinderAPI.xcodeproj">
@@ -64,7 +64,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1A1625E01C81FA6E00CECCFE"
+            BlueprintIdentifier = "1A1625FF1C81FAA600CECCFE"
             BuildableName = "PetFinderAPITV.framework"
             BlueprintName = "PetFinderAPITV"
             ReferencedContainer = "container:PetFinderAPI.xcodeproj">
@@ -82,7 +82,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1A1625E01C81FA6E00CECCFE"
+            BlueprintIdentifier = "1A1625FF1C81FAA600CECCFE"
             BuildableName = "PetFinderAPITV.framework"
             BlueprintName = "PetFinderAPITV"
             ReferencedContainer = "container:PetFinderAPI.xcodeproj">
@@ -93,7 +93,7 @@
       buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Ad Hoc"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

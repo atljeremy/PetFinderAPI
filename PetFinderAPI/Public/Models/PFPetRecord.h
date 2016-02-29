@@ -91,5 +91,8 @@
 - (PFPetPhotoType*)defaultThumbnail;
 - (PFPetPhotoType*)defaultHiRes;
 - (PFPetPhotoType*)defaultMedRes;
+- (NSArray*)hiResPhotos;
+- (NSArray*)mediumResPhotos;
+- (NSArray*)lowResPhotos;
 
 @end

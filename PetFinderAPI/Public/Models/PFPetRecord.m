@@ -12,6 +12,9 @@
 @property (nonatomic, strong) PFPetPhotoType* defaultThumbnailPhoto;
 @property (nonatomic, strong) PFPetPhotoType* defaultHiResPhoto;
 @property (nonatomic, strong) PFPetPhotoType* defaultMedResPhoto;
+@property (nonatomic, strong) NSArray* internalThumbnailPhotos;
+@property (nonatomic, strong) NSArray* internalHiResPhotos;
+@property (nonatomic, strong) NSArray* internalMedResPhotos;
 @end
 
 @implementation PFPetRecord
@@ -150,6 +153,51 @@
     }
     
     return nil;
+}
+
+- (NSArray*)hiResPhotos
+{
+    if (self.internalHiResPhotos) {
+        return self.internalHiResPhotos;
+    }
+    
+    self.internalHiResPhotos = [self photosForSize:kPetPhotoXKey];
+    
+    return self.internalHiResPhotos;
+}
+
+- (NSArray*)mediumResPhotos
+{
+    if (self.internalHiResPhotos) {
+        return self.internalHiResPhotos;
+    }
+    
+    self.internalHiResPhotos = [self photosForSize:kPetPhotoPNKey];
+    
+    return self.internalHiResPhotos;
+}
+
+- (NSArray*)lowResPhotos
+{
+    if (self.internalHiResPhotos) {
+        return self.internalHiResPhotos;
+    }
+    
+    self.internalHiResPhotos = [self photosForSize:kPetPhotoFPMKey];
+    
+    return self.internalHiResPhotos;
+}
+
+- (NSArray*)photosForSize:(NSString*)size {
+    NSMutableArray* photos = [@[] mutableCopy];
+    
+    for (PFPetPhotoType* photoType in self.mediaType.photos) {
+        if ([photoType.size isEqualToString:size]) {
+            [photos addObject:photoType];
+        }
+    }
+    
+    return photos;
 }
 
 @end
