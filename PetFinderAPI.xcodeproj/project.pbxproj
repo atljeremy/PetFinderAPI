@@ -89,7 +89,8 @@
 		1A1626731C81FB4500CECCFE /* PFBaseRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A37291B187DCB0F00129211 /* PFBaseRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A1626741C81FB4600CECCFE /* PFConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A4545B3187CABE400A33EF8 /* PFConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A1626771C81FF8600CECCFE /* PetFinderAPITV-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 1A1626761C81FF8600CECCFE /* PetFinderAPITV-Prefix.pch */; };
-		1A1626B71C83ADCD00CECCFE /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A435CD71C58439E002C1B61 /* AFNetworking.framework */; };
+		1A3837A71C84994D00CC2951 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3837A51C8498E800CC2951 /* AFNetworking.framework */; };
+		1A3837A81C84994E00CC2951 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3837A51C8498E800CC2951 /* AFNetworking.framework */; };
 		1A435C491C583286002C1B61 /* PetFinderAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A435C3F1C583286002C1B61 /* PetFinderAPI.framework */; };
 		1A435C611C5832D3002C1B61 /* NSDate+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A75E50B187C7D8F00961844 /* NSDate+Extras.m */; };
 		1A435C621C5832D3002C1B61 /* NSDictionary+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A75E50D187C7D8F00961844 /* NSDictionary+Extras.m */; };
@@ -171,7 +172,6 @@
 		1A435CC21C5833F7002C1B61 /* PFConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A4545B3187CABE400A33EF8 /* PFConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A435CC31C5833F7002C1B61 /* PetFinderAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A75E4D7187C79C200961844 /* PetFinderAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A435CC51C583E41002C1B61 /* NSObject+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4545BC187D0B1B00A33EF8 /* NSObject+Extras.m */; };
-		1A435CE01C5843B8002C1B61 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A435CD11C58439E002C1B61 /* AFNetworking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,75 +182,12 @@
 			remoteGlobalIDString = 1A1625FF1C81FAA600CECCFE;
 			remoteInfo = PetFinderAPITV;
 		};
-		1A1626261C81FB1200CECCFE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1A435CC61C58439E002C1B61 /* AFNetworking.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 2987B0A41BC408A200179A4C;
-			remoteInfo = "AFNetworking tvOS";
-		};
 		1A435C4A1C583286002C1B61 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1A75E4C7187C79C200961844 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 1A435C3E1C583286002C1B61;
 			remoteInfo = PetFinderAPI;
-		};
-		1A435CD01C58439E002C1B61 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1A435CC61C58439E002C1B61 /* AFNetworking.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 299522391BBF104D00859F49;
-			remoteInfo = "AFNetworking iOS";
-		};
-		1A435CD21C58439E002C1B61 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1A435CC61C58439E002C1B61 /* AFNetworking.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 299522651BBF129200859F49;
-			remoteInfo = "AFNetworking watchOS";
-		};
-		1A435CD41C58439E002C1B61 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1A435CC61C58439E002C1B61 /* AFNetworking.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 299522771BBF136400859F49;
-			remoteInfo = "AFNetworking OS X";
-		};
-		1A435CD61C58439E002C1B61 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1A435CC61C58439E002C1B61 /* AFNetworking.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2987B0A51BC408A200179A4C;
-			remoteInfo = "AFNetworking tvOS";
-		};
-		1A435CD81C58439E002C1B61 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1A435CC61C58439E002C1B61 /* AFNetworking.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 298D7C3B1BC2C79500FD3B3E;
-			remoteInfo = "AFNetworking iOS Tests";
-		};
-		1A435CDA1C58439E002C1B61 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1A435CC61C58439E002C1B61 /* AFNetworking.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 298D7C4A1BC2C7B200FD3B3E;
-			remoteInfo = "AFNetworking Mac OS X Tests";
-		};
-		1A435CDC1C58439E002C1B61 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1A435CC61C58439E002C1B61 /* AFNetworking.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2987B0AE1BC408A200179A4C;
-			remoteInfo = "AFNetworking tvOS Tests";
-		};
-		1A435CDE1C5843AF002C1B61 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1A435CC61C58439E002C1B61 /* AFNetworking.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 299522381BBF104D00859F49;
-			remoteInfo = "AFNetworking iOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -269,9 +206,9 @@
 		1A37291C187DCB0F00129211 /* PFBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFBaseRequest.m; sourceTree = "<group>"; };
 		1A372A4918807C0000129211 /* NSArray+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extras.h"; sourceTree = "<group>"; };
 		1A372A4A18807C0000129211 /* NSArray+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extras.m"; sourceTree = "<group>"; };
+		1A3837A51C8498E800CC2951 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/tvOS/AFNetworking.framework; sourceTree = SOURCE_ROOT; };
 		1A435C3F1C583286002C1B61 /* PetFinderAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PetFinderAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A435C481C583286002C1B61 /* PetFinderAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetFinderAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A435CC61C58439E002C1B61 /* AFNetworking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AFNetworking.xcodeproj; path = AFNetworking/AFNetworking.xcodeproj; sourceTree = "<group>"; };
 		1A4545AF187CA8E000A33EF8 /* PFPetOptionList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFPetOptionList.h; sourceTree = "<group>"; };
 		1A4545B0187CA8E000A33EF8 /* PFPetOptionList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFPetOptionList.m; sourceTree = "<group>"; };
 		1A4545B3187CABE400A33EF8 /* PFConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFConstants.h; sourceTree = "<group>"; };
@@ -359,8 +296,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A1626B71C83ADCD00CECCFE /* AFNetworking.framework in Frameworks */,
 				1A1626251C81FAF100CECCFE /* Foundation.framework in Frameworks */,
+				1A3837A81C84994E00CC2951 /* AFNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,8 +313,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A435CE01C5843B8002C1B61 /* AFNetworking.framework in Frameworks */,
 				1A435C911C5833AD002C1B61 /* Foundation.framework in Frameworks */,
+				1A3837A71C84994D00CC2951 /* AFNetworking.framework in Frameworks */,
 				1A435C901C5833A8002C1B61 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,23 +365,9 @@
 		1A372A18187DD17000129211 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				1A435CC61C58439E002C1B61 /* AFNetworking.xcodeproj */,
+				1A3837A51C8498E800CC2951 /* AFNetworking.framework */,
 			);
 			path = Vendor;
-			sourceTree = "<group>";
-		};
-		1A435CC71C58439E002C1B61 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1A435CD11C58439E002C1B61 /* AFNetworking.framework */,
-				1A435CD31C58439E002C1B61 /* AFNetworking.framework */,
-				1A435CD51C58439E002C1B61 /* AFNetworking.framework */,
-				1A435CD71C58439E002C1B61 /* AFNetworking.framework */,
-				1A435CD91C58439E002C1B61 /* AFNetworking iOS Tests.xctest */,
-				1A435CDB1C58439E002C1B61 /* AFNetworking Mac OS X Tests.xctest */,
-				1A435CDD1C58439E002C1B61 /* AFNetworking tvOS Tests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		1A4545BF187D11C200A33EF8 /* Pet Options */ = {
@@ -815,7 +738,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				1A1626271C81FB1200CECCFE /* PBXTargetDependency */,
 			);
 			name = PetFinderAPITV;
 			productName = PetFinderAPITV;
@@ -852,7 +774,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				1A435CDF1C5843AF002C1B61 /* PBXTargetDependency */,
 			);
 			name = PetFinderAPI;
 			productName = PetFinderAPI;
@@ -911,12 +832,6 @@
 			mainGroup = 1A75E4C6187C79C200961844;
 			productRefGroup = 1A75E4D0187C79C200961844 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 1A435CC71C58439E002C1B61 /* Products */;
-					ProjectRef = 1A435CC61C58439E002C1B61 /* AFNetworking.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				1A435C3E1C583286002C1B61 /* PetFinderAPI */,
@@ -926,58 +841,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		1A435CD11C58439E002C1B61 /* AFNetworking.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = AFNetworking.framework;
-			remoteRef = 1A435CD01C58439E002C1B61 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		1A435CD31C58439E002C1B61 /* AFNetworking.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = AFNetworking.framework;
-			remoteRef = 1A435CD21C58439E002C1B61 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		1A435CD51C58439E002C1B61 /* AFNetworking.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = AFNetworking.framework;
-			remoteRef = 1A435CD41C58439E002C1B61 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		1A435CD71C58439E002C1B61 /* AFNetworking.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = AFNetworking.framework;
-			remoteRef = 1A435CD61C58439E002C1B61 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		1A435CD91C58439E002C1B61 /* AFNetworking iOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "AFNetworking iOS Tests.xctest";
-			remoteRef = 1A435CD81C58439E002C1B61 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		1A435CDB1C58439E002C1B61 /* AFNetworking Mac OS X Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "AFNetworking Mac OS X Tests.xctest";
-			remoteRef = 1A435CDA1C58439E002C1B61 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		1A435CDD1C58439E002C1B61 /* AFNetworking tvOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "AFNetworking tvOS Tests.xctest";
-			remoteRef = 1A435CDC1C58439E002C1B61 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1A1625FE1C81FAA600CECCFE /* Resources */ = {
@@ -1124,20 +987,10 @@
 			target = 1A1625FF1C81FAA600CECCFE /* PetFinderAPITV */;
 			targetProxy = 1A16260B1C81FAA700CECCFE /* PBXContainerItemProxy */;
 		};
-		1A1626271C81FB1200CECCFE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "AFNetworking tvOS";
-			targetProxy = 1A1626261C81FB1200CECCFE /* PBXContainerItemProxy */;
-		};
 		1A435C4B1C583286002C1B61 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1A435C3E1C583286002C1B61 /* PetFinderAPI */;
 			targetProxy = 1A435C4A1C583286002C1B61 /* PBXContainerItemProxy */;
-		};
-		1A435CDF1C5843AF002C1B61 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "AFNetworking iOS";
-			targetProxy = 1A435CDE1C5843AF002C1B61 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1165,7 +1018,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/tvOS";
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "$SRCROOT/PetFinderAPITV/PetFinderAPITV-Prefix.pch";
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
@@ -1199,7 +1052,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/tvOS";
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "$SRCROOT/PetFinderAPITV/PetFinderAPITV-Prefix.pch";
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
@@ -1270,6 +1123,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$SRCROOT/PetFinderAPI/PetFinderAPI-Prefix.pch";
@@ -1302,6 +1159,10 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$SRCROOT/PetFinderAPI/PetFinderAPI-Prefix.pch";
@@ -1403,6 +1264,10 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$SRCROOT/PetFinderAPI/PetFinderAPI-Prefix.pch";
@@ -1454,7 +1319,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/tvOS";
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "$SRCROOT/PetFinderAPITV/PetFinderAPITV-Prefix.pch";
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
