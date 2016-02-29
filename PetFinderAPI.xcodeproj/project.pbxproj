@@ -89,8 +89,8 @@
 		1A1626731C81FB4500CECCFE /* PFBaseRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A37291B187DCB0F00129211 /* PFBaseRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A1626741C81FB4600CECCFE /* PFConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A4545B3187CABE400A33EF8 /* PFConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A1626771C81FF8600CECCFE /* PetFinderAPITV-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 1A1626761C81FF8600CECCFE /* PetFinderAPITV-Prefix.pch */; };
-		1A3837A71C84994D00CC2951 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3837A51C8498E800CC2951 /* AFNetworking.framework */; };
-		1A3837A81C84994E00CC2951 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3837A51C8498E800CC2951 /* AFNetworking.framework */; };
+		1A3837D41C84A54800CC2951 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3837D31C84A54800CC2951 /* AFNetworking.framework */; };
+		1A3837D61C84A56A00CC2951 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3837D51C84A56A00CC2951 /* AFNetworking.framework */; };
 		1A435C491C583286002C1B61 /* PetFinderAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A435C3F1C583286002C1B61 /* PetFinderAPI.framework */; };
 		1A435C611C5832D3002C1B61 /* NSDate+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A75E50B187C7D8F00961844 /* NSDate+Extras.m */; };
 		1A435C621C5832D3002C1B61 /* NSDictionary+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A75E50D187C7D8F00961844 /* NSDictionary+Extras.m */; };
@@ -129,7 +129,6 @@
 		1A435C841C5832D3002C1B61 /* PFShelterListByBreedRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A75E53F187C852500961844 /* PFShelterListByBreedRequest.m */; };
 		1A435C851C5832D3002C1B61 /* PFBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A37291C187DCB0F00129211 /* PFBaseRequest.m */; };
 		1A435C861C5832D3002C1B61 /* PFConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4545B4187CABE400A33EF8 /* PFConstants.m */; };
-		1A435C901C5833A8002C1B61 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC092201881B63700DDD8DB /* MapKit.framework */; };
 		1A435C911C5833AD002C1B61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A75E4D2187C79C200961844 /* Foundation.framework */; };
 		1A435C9C1C5833F5002C1B61 /* PFMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A4545B7187D054000A33EF8 /* PFMacros.h */; };
 		1A435C9D1C5833F5002C1B61 /* NSDate+Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A75E50A187C7D8F00961844 /* NSDate+Extras.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -206,7 +205,8 @@
 		1A37291C187DCB0F00129211 /* PFBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFBaseRequest.m; sourceTree = "<group>"; };
 		1A372A4918807C0000129211 /* NSArray+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extras.h"; sourceTree = "<group>"; };
 		1A372A4A18807C0000129211 /* NSArray+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extras.m"; sourceTree = "<group>"; };
-		1A3837A51C8498E800CC2951 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/tvOS/AFNetworking.framework; sourceTree = SOURCE_ROOT; };
+		1A3837D31C84A54800CC2951 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = SOURCE_ROOT; };
+		1A3837D51C84A56A00CC2951 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/tvOS/AFNetworking.framework; sourceTree = SOURCE_ROOT; };
 		1A435C3F1C583286002C1B61 /* PetFinderAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PetFinderAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A435C481C583286002C1B61 /* PetFinderAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetFinderAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A4545AF187CA8E000A33EF8 /* PFPetOptionList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFPetOptionList.h; sourceTree = "<group>"; };
@@ -297,7 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A1626251C81FAF100CECCFE /* Foundation.framework in Frameworks */,
-				1A3837A81C84994E00CC2951 /* AFNetworking.framework in Frameworks */,
+				1A3837D61C84A56A00CC2951 /* AFNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,8 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A435C911C5833AD002C1B61 /* Foundation.framework in Frameworks */,
-				1A3837A71C84994D00CC2951 /* AFNetworking.framework in Frameworks */,
-				1A435C901C5833A8002C1B61 /* MapKit.framework in Frameworks */,
+				1A3837D41C84A54800CC2951 /* AFNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +332,7 @@
 		1A1626011C81FAA600CECCFE /* PetFinderAPITV */ = {
 			isa = PBXGroup;
 			children = (
+				1A3837D51C84A56A00CC2951 /* AFNetworking.framework */,
 				1A1626021C81FAA600CECCFE /* PetFinderAPITV.h */,
 				1A1626041C81FAA600CECCFE /* Info.plist */,
 				1A1626761C81FF8600CECCFE /* PetFinderAPITV-Prefix.pch */,
@@ -362,14 +362,6 @@
 			name = "Pet Media";
 			sourceTree = "<group>";
 		};
-		1A372A18187DD17000129211 /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-				1A3837A51C8498E800CC2951 /* AFNetworking.framework */,
-			);
-			path = Vendor;
-			sourceTree = "<group>";
-		};
 		1A4545BF187D11C200A33EF8 /* Pet Options */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,7 +376,6 @@
 		1A75E4C6187C79C200961844 = {
 			isa = PBXGroup;
 			children = (
-				1A372A18187DD17000129211 /* Vendor */,
 				1A75E4D4187C79C200961844 /* PetFinderAPI */,
 				1A75E4E8187C79C200961844 /* PetFinderAPITests */,
 				1A1626011C81FAA600CECCFE /* PetFinderAPITV */,
@@ -431,6 +422,7 @@
 		1A75E4D5187C79C200961844 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1A3837D31C84A54800CC2951 /* AFNetworking.framework */,
 				1A75E4D6187C79C200961844 /* PetFinderAPI-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -734,6 +726,7 @@
 				1A1625FC1C81FAA600CECCFE /* Frameworks */,
 				1A1625FD1C81FAA600CECCFE /* Headers */,
 				1A1625FE1C81FAA600CECCFE /* Resources */,
+				1A3837D01C84A2F200CC2951 /* Carthage copy-frameworks */,
 			);
 			buildRules = (
 			);
@@ -770,6 +763,7 @@
 				1A435C3B1C583286002C1B61 /* Frameworks */,
 				1A435C3C1C583286002C1B61 /* Headers */,
 				1A435C3D1C583286002C1B61 /* Resources */,
+				1A3837D21C84A4F000CC2951 /* Carthage copy-frameworks */,
 			);
 			buildRules = (
 			);
@@ -872,6 +866,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A3837D01C84A2F200CC2951 /* Carthage copy-frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/tvOS/AFNetworking.framework",
+			);
+			name = "Carthage copy-frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		1A3837D21C84A4F000CC2951 /* Carthage copy-frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/AFNetworking.framework",
+			);
+			name = "Carthage copy-frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1A1625FB1C81FAA600CECCFE /* Sources */ = {
@@ -1125,7 +1152,7 @@
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
@@ -1161,7 +1188,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
@@ -1266,7 +1293,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
