@@ -8,7 +8,10 @@ Online Documentation is available [here](http://atljeremy.github.io/PetFinderAPI
 How to Install this Framework:
 ----------------------------
 
-- Drag it into your Xcode project
+### Carthage:
+```
+github "atljeremy/PetFinderAPI" ~> 1.0
+```
 
 How to Use This Framework:
 --------------------------
