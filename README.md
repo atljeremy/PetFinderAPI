@@ -5,6 +5,8 @@ This is the source code project for the Pet Finder API iOS Framework.
 
 Online Documentation is available [here](http://atljeremy.github.io/PetFinderAPI/).
 
+[![Carthage compatible](https://img.shields.io/badge/Carthage-Compatible-brightgreen.svg?style=flat)](https://github.com/atljeremy/PetFinderAPI)
+
 How to Install this Framework:
 ----------------------------
 
