@@ -726,7 +726,6 @@
 				1A1625FC1C81FAA600CECCFE /* Frameworks */,
 				1A1625FD1C81FAA600CECCFE /* Headers */,
 				1A1625FE1C81FAA600CECCFE /* Resources */,
-				1A3837D01C84A2F200CC2951 /* Carthage copy-frameworks */,
 			);
 			buildRules = (
 			);
@@ -763,7 +762,6 @@
 				1A435C3B1C583286002C1B61 /* Frameworks */,
 				1A435C3C1C583286002C1B61 /* Headers */,
 				1A435C3D1C583286002C1B61 /* Resources */,
-				1A3837D21C84A4F000CC2951 /* Carthage copy-frameworks */,
 			);
 			buildRules = (
 			);
@@ -866,39 +864,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		1A3837D01C84A2F200CC2951 /* Carthage copy-frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/tvOS/AFNetworking.framework",
-			);
-			name = "Carthage copy-frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-		1A3837D21C84A4F000CC2951 /* Carthage copy-frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/AFNetworking.framework",
-			);
-			name = "Carthage copy-frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1A1625FB1C81FAA600CECCFE /* Sources */ = {
